@@ -1,0 +1,1 @@
+import{S as o,i as r,s as c,t as i,h as m,g as l,n as a,d as u}from"../chunks/index-60624bc8.js";function d(s){let t;return{c(){t=i("machyme")},l(e){t=m(e,"machyme")},m(e,n){l(e,t,n)},p:a,i:a,o:a,d(e){e&&u(t)}}}class h extends o{constructor(t){super(),r(this,t,null,d,c,{})}}export{h as default};
