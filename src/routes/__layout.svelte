@@ -1,4 +1,4 @@
 <a href="/">home</a>
-<a href="/blog/use-mdsvex">blog</a>
+<a href="/blog">blog</a>
 
 <slot />

@@ -10,6 +10,7 @@ const config = {
 		preprocess(),
 		mdsvex({
 			extensions: ['.md'],
+			layout: './src/lib/layout/blog.layout.svelte',
 			rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
 		})
 	],
