@@ -49,7 +49,7 @@
 	</ul>
 {/if}
 
-<a href="/blog/rss.xml">subscribe to RSS 🧠🚀</a>
+<a href="/rss.xml">subscribe to RSS 🧠🚀</a>
 
 <style>
 	li {
