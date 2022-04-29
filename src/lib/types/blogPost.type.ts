@@ -3,5 +3,5 @@ export type BlogPost = {
 	slug: string;
 	title: string;
 	description: string;
-	keywords: string;
+	keywords: Array<string>;
 };

@@ -1,9 +1,13 @@
 <script lang="ts" context="module">
 	export const prerender = true;
 
-	export const load: import('@sveltejs/kit').Load = async ({ session }) => {
-		const posts = session.posts;
-		return { props: { posts } };
+	export const load: import('@sveltejs/kit').Load = async ({ session, params }) => {
+		return {
+			props: {
+				posts: session.posts,
+				keyword: params.keyword
+			}
+		};
 	};
 </script>
 
@@ -13,6 +17,7 @@
 
 	import type { BlogPost } from '$lib/types/blogPost.type';
 	export let posts: BlogPost[];
+	export let keyword: string;
 </script>
 
 <OpenGraph
@@ -24,4 +29,6 @@
 	}}
 />
 
-<ArticleList {posts} />
+<h1>Blog articles about {keyword}</h1>
+
+<ArticleList {posts} {keyword} />

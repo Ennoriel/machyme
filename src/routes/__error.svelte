@@ -1,12 +1,11 @@
-<script context="module">
+<script context="module" lang="ts">
 	import { dev } from '$app/env';
 
-	/** @type {import('@sveltejs/kit').Load} */
-	export function load({ error, status }) {
+	export const load: import('@sveltejs/kit').Load = ({ error, status }) => {
 		if (dev) {
 			return {
 				props: {
-					title: `${status}: ${error.message}`
+					title: `${status}: ${error?.message}`
 				}
 			};
 		} else {
@@ -15,11 +14,11 @@
 				redirect: '/'
 			};
 		}
-	}
+	};
 </script>
 
-<script>
-	export let title;
+<script lang="ts">
+	export let title: string;
 </script>
 
 <h1>{title}</h1>

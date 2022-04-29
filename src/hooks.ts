@@ -11,7 +11,11 @@ export const handle: Handle = async ({ event, resolve }) => {
 		Object.entries(import.meta.glob('/src/routes/blog/*.md')).map(async ([path, page]) => {
 			const { metadata } = await page();
 			const filename = path.split('/').pop();
-			return { ...metadata, filename };
+			return {
+				...metadata,
+				filename,
+				keywords: metadata.keywords.split(',')
+			};
 		})
 	);
 	posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
