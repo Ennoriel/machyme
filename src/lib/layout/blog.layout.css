@@ -1,5 +1,5 @@
 blockquote {
-	margin: 1rem 3rem 0;
+	margin: 1rem 1rem 0;
 	border-left: 3px solid #bbb;
 	padding: 1rem 2rem;
 	text-align: justify;
@@ -43,14 +43,6 @@ th {
 	padding: 5px;
 }
 
-h1 {
-	font-size: 36px;
-}
-
-h2 {
-	font-size: 24px;
-}
-
 h1:hover .icon-link::before,
 h2:hover .icon-link::before,
 h3:hover .icon-link::before,
@@ -62,12 +54,7 @@ h4:hover .icon-link::before {
 code[class*='language-'],
 pre[class*='language-'] {
 	letter-spacing: 0;
-	-moz-tab-size: 2;
-	-o-tab-size: 2;
 	tab-size: 2;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
 	hyphens: none;
 	white-space: pre-wrap;
 	word-wrap: normal;

@@ -32,10 +32,3 @@
 		</li>
 	{/each}
 </ul>
-
-<style>
-	* {
-		color: #6f705e;
-		margin-left: 0;
-	}
-</style>

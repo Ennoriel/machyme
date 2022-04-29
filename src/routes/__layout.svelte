@@ -1,10 +1,10 @@
 <script>
-	import VhObserver from "$lib/components/VhObserver.svelte";
+	import VhObserver from '$lib/components/VhObserver.svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 </script>
 
-<VhObserver/>
+<VhObserver />
 
 <Nav />
 
@@ -44,15 +44,15 @@
 	:global(body) {
 		--primary-color: #ed1f3a;
 		--secondary-color: #002395;
-		--text-color: #333;
+		--text-color: #555;
 		--focus-color: var(--primary-color);
 		--bg-color: #f7f7fa;
 		--header-height: 60px;
 
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
-		font-weight: 100;
-		font-size: 14px;
+		font-weight: 300;
+		font-size: 16px;
 		line-height: 1.5em;
 		color: var(--text-color);
 		background-color: var(--bg-color);
@@ -67,8 +67,8 @@
 	:global(button) {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
-		font-weight: 100;
-		font-size: 14px;
+		font-weight: 300;
+		font-size: 16px;
 	}
 
 	:global(h1),
@@ -78,17 +78,26 @@
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
 		font-weight: 100;
-		margin: 1rem 0 0.5rem 1rem;
+		margin: 1rem 0 0.5rem 0;
 		line-height: 1;
 	}
 
 	:global(p) {
 		margin: 1rem 0;
 	}
+
+	:global(h1) {
+		font-size: 30px;
+	}
+	:global(h2) {
+		font-size: 24px;
+	}
+
 	:global(:focus-visible) {
 		outline: 2px solid var(--focus-color);
 		outline-offset: 2px;
 	}
+
 	:global(*) {
 		--dark: #ccc;
 		--light: #00000000;

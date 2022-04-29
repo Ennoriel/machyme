@@ -13,7 +13,7 @@
 	];
 </script>
 
-<nav>
+<nav aria-label="primary">
 	{#each routes as route}
 		{@const active = $page.url.pathname === route.path}
 		<a href={route.path} aria-current={(active && 'page') || undefined}>

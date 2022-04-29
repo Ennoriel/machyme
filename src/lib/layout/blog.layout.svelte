@@ -25,16 +25,18 @@
 
 <slot />
 
-<button
-	on:click={() => {
-		document.body.scrollTop = 0;
-		document.documentElement.scrollTop = 0;
-	}}
->
-	Scroll to the top of the page
-</button>
+<nav aria-label="secondary">
+	<button
+		on:click={() => {
+			document.body.scrollTop = 0;
+			document.documentElement.scrollTop = 0;
+		}}
+	>
+		Scroll to the top of the page
+	</button>
 
-<a href="/blog">Go back to the list of articles</a>
+	<a href="/blog">Go back to the list of articles</a>
+</nav>
 
 <style>
 	a {
@@ -45,5 +47,12 @@
 		padding: 0.3rem 0.6rem;
 		border-radius: 4px;
 		text-decoration: none;
+		text-align: center;
+	}
+
+	nav {
+		display: flex;
+		gap: 8px;
+		justify-content: center;
 	}
 </style>
