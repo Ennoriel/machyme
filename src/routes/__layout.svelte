@@ -1,7 +1,10 @@
 <script>
+	import VhObserver from "$lib/components/VhObserver.svelte";
 	import Nav from '$lib/components/Nav.svelte';
-	import Footer from '../lib/components/Footer.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 </script>
+
+<VhObserver/>
 
 <Nav />
 
@@ -16,7 +19,7 @@
 		max-width: 800px;
 		margin: 0 auto;
 		padding: 16px;
-		min-height: calc(100vh - 100px);
+		min-height: calc(var(--vh, 1vh) * 100 - 100px);
 	}
 
 	:global(*) {
