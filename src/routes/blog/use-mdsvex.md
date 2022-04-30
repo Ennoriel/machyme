@@ -3,7 +3,10 @@ date: Fri Apr 27 2022 06:17:15 GMT+0200 (UTC)
 slug: use-mdsvex
 title: How to build this blog 🔨
 description: With the use of the mdsvex & mdsvex libraries, we can now easily create a blog post with very few boilerplate to write.
-keywords: svelte-kit,svelte,mdsvex
+keywords:
+  - svelte-kit
+  - svelte
+  - mdsvex
 ---
 
 In the article, we'll see how to configure a [SvelteKit](https://kit.svelte.dev/) markdown based blog with the help of the [mdsvex](https://mdsvex.com/) library. The blog we are going to build is:

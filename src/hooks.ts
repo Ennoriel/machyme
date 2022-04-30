@@ -13,8 +13,7 @@ export const handle: Handle = async ({ event, resolve }) => {
 			const filename = path.split('/').pop();
 			return {
 				...metadata,
-				filename,
-				keywords: metadata.keywords.split(',')
+				filename
 			};
 		})
 	);

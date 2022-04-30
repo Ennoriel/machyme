@@ -3,7 +3,9 @@ date: Fri Apr 22 2022 06:17:15 GMT+0200 (UTC)
 slug: hello-world
 title: Hello World! 🌴
 description: The first commit, the first time, the first article.
-keywords: easter egg,svelte
+keywords:
+  - svelte
+  - easter egg
 ---
 
 It works!
