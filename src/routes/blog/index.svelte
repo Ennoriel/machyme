@@ -19,7 +19,7 @@
 	data={{
 		description:
 			'The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz.',
-		title: 'Machyme - dev blogs',
+		title: 'Machyme - dev blog',
 		keywords: 'blog, tutorial, news, articles'
 	}}
 />

@@ -8,11 +8,21 @@
 </script>
 
 <script lang="ts">
+	import OpenGraph from '$lib/components/OpenGraph.svelte';
 	import type { BlogPost } from '$lib/types/blogPost.type';
 	export let posts: BlogPost[];
 
 	$: keywords = [...new Set(posts.map(({ keywords }) => keywords).flat())].sort();
 </script>
+
+<OpenGraph
+		data={{
+		description:
+			'The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz.',
+		title: 'Machyme - dev blog',
+		keywords: 'blog, tutorial, news, articles'
+	}}
+/>
 
 <h1>Hello, it's me!</h1>
 
