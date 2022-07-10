@@ -6,10 +6,10 @@
 </script>
 
 <script lang="ts">
-	import OpenGraph from '$lib/components/OpenGraph.svelte';
-	import ArticleList from '$lib/components/ArticleList.svelte';
+	import OpenGraph from '../../lib/components/OpenGraph.svelte';
+	import ArticleList from '../../lib/components/ArticleList.svelte';
 
-	import type { BlogPost } from '$lib/types/blogPost.type';
+	import type { BlogPost } from '../../lib/types/blogPost.type';
 	export let posts: BlogPost[];
 </script>
 

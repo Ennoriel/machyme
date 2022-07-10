@@ -6,8 +6,8 @@
 </script>
 
 <script lang="ts">
-	import OpenGraph from '$lib/components/OpenGraph.svelte';
-	import type { BlogPost } from '$lib/types/blogPost.type';
+	import OpenGraph from '../lib/components/OpenGraph.svelte';
+	import type { BlogPost } from '../lib/types/blogPost.type';
 	export let posts: BlogPost[];
 
 	$: keywords = [...new Set(posts.map(({ keywords }) => keywords).flat())].sort();

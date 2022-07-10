@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { BlogPost } from '$lib/types/blogPost.type';
+	import type { BlogPost } from '../types/blogPost.type';
 	export let posts: BlogPost[];
 	export let keyword: string | undefined = undefined;
 

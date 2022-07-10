@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import type { OpenGraph } from '$lib/types/openGraph.type';
+	import type { OpenGraph } from '../types/openGraph.type';
 
 	export let data: OpenGraph;
 
