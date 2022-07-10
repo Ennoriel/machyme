@@ -1,6 +1,4 @@
 <script lang="ts" context="module">
-	export const prerender = true;
-
 	export const load: import('@sveltejs/kit').Load = async ({ session }) => {
 		const posts = session.posts;
 		return { props: { posts } };
