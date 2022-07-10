@@ -31,6 +31,7 @@
 	:global(a) {
 		color: var(--primary-color);
 		transition: color 0.1s;
+		text-decoration: none;
 	}
 	:global(button) {
 		border: none;

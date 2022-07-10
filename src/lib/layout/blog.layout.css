@@ -18,6 +18,10 @@ blockquote p {
 	}
 }
 
+ol {
+	margin: 1rem;
+}
+
 /** table */
 table {
 	border-collapse: collapse;
@@ -100,7 +104,8 @@ pre[class*='language-'] code {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #6f705e;
+	color: #aeae9f;
+	font-weight: bold;
 }
 
 .token.operator,

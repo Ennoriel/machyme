@@ -1,7 +1,7 @@
 ---
 date: Sat Apr 30 2022 11:58:32 GMT+0200 (UTC)
 slug: svelte-observers
-title: 'Svelte very-utils: vh, dpr 🔍'
+title: 'vh observer & dpr observer 🔍'
 description: The easiest way to implement a vh observer and a dpr observer in svelte. These components are useful in almost any svelte project.
 keywords:
   - svelte
@@ -24,7 +24,7 @@ There is a very good article and native javascript implementation on [css-tricks
 
 With that implementation, you can use the `var(--vh)` value in your css.
 
-## dpr
+## dpr observer
 
 > The device pixel ratio `window.devicePixelRatio` is the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
 
@@ -49,5 +49,3 @@ In the first case, if you have a service that returns an image with the user res
 The dpr value can change through the lifetime of any page. For example, if a user feels that the text on your site is too small, he might zoom in. To take that into account, you'd have to recompute the dpr value with an observer!
 
 <Gist uri="Ennoriel/02efec514c6107e48a88f0f84486a7ac"/>
-
-

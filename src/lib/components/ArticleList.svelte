@@ -25,13 +25,13 @@
 </script>
 
 {#if groups.latest.length && groups.oldest.length}
-	<h1>Published earlier</h1>
+	<h1>Latest publications</h1>
 {/if}
 {#if groups.latest.length}
 	<ul>
 		{#each groups.latest as post}
 			<li>
-				<a href={`/blog/${post.slug}`}>{post.title}</a>, {post.keywords.join(' – ')}
+				<a href={`/blog/${post.slug}`}>{post.title}</a>, {post.keywords?.join(' – ')}
 			</li>
 		{/each}
 	</ul>
@@ -43,11 +43,13 @@
 	<ul>
 		{#each groups.oldest as post}
 			<li>
-				<a href={`/blog/${post.slug}`}>{post.title}</a>, {post.keywords.join(' – ')}
+				<a href={`/blog/${post.slug}`}>{post.title}</a>, {post.keywords?.join(' – ')}
 			</li>
 		{/each}
 	</ul>
 {/if}
+
+<h1>RSS</h1>
 
 <a href="/rss.xml">subscribe to RSS 🧠🚀</a>
 

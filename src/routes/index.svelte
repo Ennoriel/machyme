@@ -16,7 +16,7 @@
 </script>
 
 <OpenGraph
-		data={{
+	data={{
 		description:
 			'The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz.',
 		title: 'Machyme - dev blog',
