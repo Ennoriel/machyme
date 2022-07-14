@@ -1,10 +1,12 @@
 <script>
+    import { floor2 } from 'chyme';
     export let ctx;
     export let pos;
     export let redraw;
     export let size;
     export let i;
     export let j;
+    export let margin;
 
     export let focusSize;
     export let restSize;
@@ -21,18 +23,21 @@
     const img = new Image();
     img.src = "/wallpaper.jpg";
 
-    let distanceX, distanceY, distance, ratio, margin, squareSize, flooredMargin, flooredSquareSize;
+    let distanceX, distanceY, distance, ratio, position, squareSize, flooredGap, flooredSquareSize;
 
     $: if (redraw) {
+        // distance from cursor
         distanceX = Math.abs(center.x - (pos.x * window.devicePixelRatio))
         distanceY = Math.abs(center.y - (pos.y * window.devicePixelRatio))
         distance = Math.sqrt(distanceX * distanceX + distanceY * distanceY)
         ratio = distance < treshold ? 1 - distance / treshold : 0;
-        margin = (size - (restSize - (restSize - focusSize) * ratio)) / 2;
-        squareSize = size - 2 * margin;
-        flooredSquareSize = Math.floor(squareSize / 2) * 2;
-        flooredMargin = (size - flooredSquareSize) / 2;
 
-        draw(ratio, flooredMargin, flooredSquareSize);
+        // position of a square within its grid cell
+        position = (size - (restSize - (restSize - focusSize) * ratio)) / 2;
+        squareSize = size - 2 * position;
+        flooredSquareSize = floor2(squareSize);
+        flooredGap = (size - flooredSquareSize) / 2;
+
+        draw(ratio, flooredGap, flooredSquareSize, margin);
     }
 </script>

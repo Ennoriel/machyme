@@ -1,15 +1,20 @@
 <script lang="ts">
+    import {floor} from 'chyme';
     import Grid from './Grid.svelte';
 
     export let size: number | undefined;
     export let rect: DOMRect | undefined;
 
-    let width, height;
+    let width, height, margin;
 
     function resize() {
         if (rect && size) {
             width = Math.floor(window.devicePixelRatio * rect.width / size);
             height = Math.floor(window.devicePixelRatio * rect.height / size);
+            margin = {
+                width: floor((window.devicePixelRatio * rect.width) % size / 2, 1),
+                height: floor((window.devicePixelRatio * rect.height) % size / 2, 1)
+            }
         }
     }
 
@@ -19,5 +24,5 @@
 <svelte:window on:resize={resize} />
 
 <Grid {width} {height} let:i let:j>
-    <slot {i} {j}/>
+    <slot {i} {j} {margin}/>
 </Grid>

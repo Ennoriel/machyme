@@ -10,8 +10,8 @@
 </script>
 
 <Canvas let:ctx let:rect let:redraw let:pos>
-    <DistributiveGrid {rect} size={SIZE} let:i let:j>
-        <ColorPoint {ctx} {pos} {redraw} {i} {j} size={SIZE} restSize={REST_SIZE} focusSize={FOCUS_SIZE} treshold={TRESHOLD}/>
+    <DistributiveGrid {rect} size={SIZE} let:i let:j let:margin>
+        <ColorPoint {ctx} {pos} {redraw} {i} {j} {margin} size={SIZE} restSize={REST_SIZE} focusSize={FOCUS_SIZE} treshold={TRESHOLD}/>
     </DistributiveGrid>
 </Canvas>
 

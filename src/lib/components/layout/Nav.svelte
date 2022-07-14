@@ -46,14 +46,16 @@
 	a {
 		height: 40px;
 		line-height: 40px;
-		padding: 0 2rem;
-		letter-spacing: 0.5rem;
 
 		color: inherit;
 		text-decoration: none;
 	}
 
 	@media (min-width: 768px) {
+		a {
+			padding: 0 1rem;
+			letter-spacing: 0.5rem;
+		}
 		a:hover {
 			color: var(--primary-color);
 		}

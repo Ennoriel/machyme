@@ -22,12 +22,13 @@
     }
 
     function resize() {
-        rect = canvas?.getBoundingClientRect();
+        const width = document?.body?.getBoundingClientRect()?.width - 32;
+        const height = Math.max(200, width / 4);
 
-        canvas.width = rect.width * window.devicePixelRatio;
-        canvas.height = rect.height * window.devicePixelRatio;
-        canvas.style.width = `${rect.width}px`;
-        canvas.style.height = `${rect.height}px`;
+        canvas.width = width * window.devicePixelRatio;
+        canvas.height = height * window.devicePixelRatio;
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
 
         redraw++;
     }

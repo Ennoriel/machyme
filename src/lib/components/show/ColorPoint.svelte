@@ -9,12 +9,13 @@
     export let focusSize;
     export let restSize;
     export let treshold;
+    export let margin;
 
-    function draw(ratio, margin, squareSize) {
-        ctx.clearRect(size * i, size * j, size, size);
+    function draw(ratio, gap, squareSize, margin) {
+        ctx.clearRect(margin.width + size * i, margin.height + size * j, size, size);
         ctx.fillStyle = ratio > 0 ? "red" : "#777";
-        ctx.fillRect(size * i + margin, size * j + margin, squareSize, squareSize);
+        ctx.fillRect(margin.width + size * i + gap, margin.height + size * j + gap, squareSize, squareSize);
     }
 </script>
 
-<Point {ctx} {pos} {redraw} {size} {i} {j} {focusSize} {restSize} {draw} {treshold}/>
+<Point {ctx} {pos} {redraw} {size} {i} {j} {margin} {focusSize} {restSize} {draw} {treshold}/>
