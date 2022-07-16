@@ -15,12 +15,8 @@
 <Footer />
 
 <style>
-	:global(main) {
-		max-width: 800px;
-	}
-
 	main {
-		margin: 0 auto;
+		width: 100vw;
 		padding: 16px;
 		min-height: calc(var(--vh, 1vh) * 100 - 100px);
 	}

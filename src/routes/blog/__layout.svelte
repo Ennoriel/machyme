@@ -1,7 +1,10 @@
-<slot />
+<div>
+	<slot />
+</div>
 
 <style>
-	:global(main) {
+	div {
 		max-width: 800px;
+		margin: auto;
 	}
 </style>

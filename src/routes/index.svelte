@@ -22,21 +22,30 @@
 	}}
 />
 
-<h1>Hello, it's me!</h1>
+<div>
+	<h1>Hello, it's me!</h1>
 
-<p>
-	A minimalist blog written by a minimalist developer that enjoys building software for a more
-	sustainable & accessible web.
-</p>
+	<p>
+		A minimalist blog written by a minimalist developer that enjoys building software for a more
+		sustainable & accessible web.
+	</p>
 
-<p>Built with no external fonts, stylesheets or cookies.</p>
+	<p>Built with no external fonts, stylesheets or cookies.</p>
 
-<p>Subjects that I already wrote about:</p>
+	<p>Subjects that I already wrote about:</p>
 
-<ul>
-	{#each keywords as keyword}
-		<li>
-			<a href={`/blog/${keyword}`}>{keyword}</a>
-		</li>
-	{/each}
-</ul>
+	<ul>
+		{#each keywords as keyword}
+			<li>
+				<a href={`/blog/${keyword}`}>{keyword}</a>
+			</li>
+		{/each}
+	</ul>
+</div>
+
+<style>
+	div {
+		max-width: 800px;
+		margin: auto;
+	}
+</style>
