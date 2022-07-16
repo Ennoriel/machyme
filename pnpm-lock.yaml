@@ -16,7 +16,7 @@ specifiers:
   rehype-autolink-headings: ^6.1.1
   rehype-slug: ^5.0.1
   svelte: ^3.49.0
-  svelte-awesome-color-picker: ^1.1.2
+  svelte-awesome-color-picker: ^1.1.5
   svelte-check: ^2.8.0
   svelte-preprocess: ^4.10.7
   tslib: ^2.4.0
@@ -28,8 +28,8 @@ dependencies:
 
 devDependencies:
   '@playwright/test': 1.23.2
-  '@sveltejs/adapter-vercel': 1.0.0-next.62
-  '@sveltejs/kit': 1.0.0-next.373_svelte@3.49.0+vite@3.0.0
+  '@sveltejs/adapter-vercel': 1.0.0-next.63
+  '@sveltejs/kit': 1.0.0-next.377_svelte@3.49.0+vite@3.0.0
   '@typescript-eslint/eslint-plugin': 5.30.5_f646e16e2de31e818e163bded4698d6b
   '@typescript-eslint/parser': 5.30.5_eslint@8.19.0+typescript@4.7.4
   chyme: 1.1.4
@@ -42,7 +42,7 @@ devDependencies:
   rehype-autolink-headings: 6.1.1
   rehype-slug: 5.0.1
   svelte: 3.49.0
-  svelte-awesome-color-picker: 1.1.2
+  svelte-awesome-color-picker: 1.1.5
   svelte-check: 2.8.0_svelte@3.49.0
   svelte-preprocess: 4.10.7_svelte@3.49.0+typescript@4.7.4
   tslib: 2.4.0
@@ -154,8 +154,8 @@ packages:
       picomatch: 2.3.1
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.62:
-    resolution: {integrity: sha512-4wzKUG5BJBg3llnxOEPBx9d4Alit4uHO+VDcePoFA/lWzF0OElPYuDKUGe1wZIfD+s2P+YcbWVqrjxEDdseMmA==}
+  /@sveltejs/adapter-vercel/1.0.0-next.63:
+    resolution: {integrity: sha512-awb1zmT+hAAHv+x7gOY/8Ch64spxKX6H/DQb+S/VGYRQ6i1WvNgsBUF9vk88KR//7tUY8y/xiTLAb99hJ57WhA==}
     dependencies:
       '@vercel/nft': 0.20.1
       esbuild: 0.14.49
@@ -164,8 +164,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.373_svelte@3.49.0+vite@3.0.0:
-    resolution: {integrity: sha512-xkxZyPYFzKQ3HZCt/HIVLbLVpR2TeTvhri+BuWLAUZVazaUHwhKQhkzAcljWX+8m7Ca4WdHpD4t3VeaIhXFMPA==}
+  /@sveltejs/kit/1.0.0-next.377_svelte@3.49.0+vite@3.0.0:
+    resolution: {integrity: sha512-DH2v2yUBUuDZ7vzjPXUd/yt1AMR3BIkZN0ubLAvS2C+q5Wbvk7ZvAJhfPZ3OYc3ZpQXe4ZGEcptOjvEYvd1lLA==}
     engines: {node: '>=16.9'}
     hasBin: true
     peerDependencies:
@@ -1761,8 +1761,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: false
 
-  /svelte-awesome-color-picker/1.1.2:
-    resolution: {integrity: sha512-chJUZ9mLzPVWWKDz4tvtM031n+YLyi0sQDzqVA7OY13UJZROOLcipA19gbPWidTTV1kdKJ7L0xmQkVW3q9iikg==}
+  /svelte-awesome-color-picker/1.1.5:
+    resolution: {integrity: sha512-EmHJRCRP7AlDySxNAiilELwo8eQmH3dIzCRNDv/rtx5kiQEaoIVqIdyh+G+CBZz2VJMUQzfcpcRSXW41Bn5z0w==}
     dev: true
 
   /svelte-check/2.8.0_svelte@3.49.0:

@@ -1,34 +1,37 @@
-<script>
-    import Point from './Point.svelte';
-    export let ctx;
-    export let pos;
-    export let redraw;
-    export let size;
-    export let i;
-    export let j;
-    export let focusSize;
-    export let restSize;
-    export let treshold;
-    export let width;
+<script lang="ts">
+	import Point from './Point.svelte';
+	import type { WH, XY } from './types';
 
-    const img = new Image();
-    img.src = "/wallpaper.jpg";
+	export let ctx: CanvasRenderingContext2D | null;
+	export let pos: XY;
+	export let redraw: number;
+	export let size: number;
+	export let i: number;
+	export let j: number;
+	export let focusSize: number;
+	export let restSize: number;
+	export let threshold: number;
+	export let width: number;
+	export let margin: WH;
 
-    function draw(ratio, margin, squareSize) {
-        const imgRatio = width / 1050 * window.devicePixelRatio;
-        ctx.clearRect(size * i, size * j, size, size);
-        ctx.drawImage(
-            img,
-            (size * i + margin) / imgRatio,
-            (size * j + margin) / imgRatio,
-            squareSize / imgRatio,
-            squareSize / imgRatio,
-            size * i + margin,
-            size * j + margin,
-            squareSize,
-            squareSize
-        );
-    }
+	const img = new Image();
+	img.src = '/wallpaper.jpg';
+
+	function draw(ratio: number, gap: number, squareSize: number) {
+		const imgRatio = (width / 1050) * window.devicePixelRatio;
+		ctx?.clearRect(margin.width + size * i, margin.height + size * j, size, size);
+		ctx?.drawImage(
+			img,
+			(size * i + gap) / imgRatio,
+			(size * j + gap) / imgRatio,
+			squareSize / imgRatio,
+			squareSize / imgRatio,
+			margin.width + size * i + gap,
+			margin.height + size * j + gap,
+			squareSize,
+			squareSize
+		);
+	}
 </script>
 
-<Point {ctx} {pos} {redraw} {size} {i} {j} {focusSize} {restSize} {draw} {treshold}/>
+<Point {pos} {redraw} {size} {i} {j} {focusSize} {restSize} {draw} {threshold} />

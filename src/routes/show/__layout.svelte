@@ -1,7 +1,7 @@
-<slot/>
+<slot />
 
 <style>
-    :global(main) {
-        max-width: none;
-    }
+	:global(main) {
+		max-width: none;
+	}
 </style>

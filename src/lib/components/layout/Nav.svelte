@@ -25,7 +25,7 @@
 		</a>
 	{/each}
 </nav>
-<hr/>
+<hr />
 
 <style>
 	nav {
@@ -35,7 +35,6 @@
 		height: 60px;
 		max-width: 800px;
 		margin: auto;
-
 	}
 
 	hr {

@@ -9,9 +9,8 @@
 		"prepare": "svelte-kit sync",
 		"test": "playwright test",
 		"check": "svelte-check --tsconfig tsconfig.json",
-		"check:watch": "svelte-check --tsconfig tsconfig.json --watch",
 		"lint": "eslint .",
-		"format": "prettier --write --plugin-search-dir=. site/dev"
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.23.2",
@@ -29,7 +28,7 @@
 		"rehype-autolink-headings": "^6.1.1",
 		"rehype-slug": "^5.0.1",
 		"svelte": "^3.49.0",
-		"svelte-awesome-color-picker": "^1.1.2",
+		"svelte-awesome-color-picker": "^1.1.5",
 		"svelte-check": "^2.8.0",
 		"svelte-preprocess": "^4.10.7",
 		"tslib": "^2.4.0",
