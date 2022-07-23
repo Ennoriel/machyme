@@ -23,7 +23,7 @@
 
 	function resize() {
 		const width = document?.body?.getBoundingClientRect()?.width - 32;
-		const height = Math.max(200, width / 4);
+		const height = Math.max(300, width / 4);
 
 		canvas.width = width * window.devicePixelRatio;
 		canvas.height = height * window.devicePixelRatio;
