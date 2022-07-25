@@ -30,7 +30,9 @@
 	$: filter = `${config.effect.name}(${res}${config.effect.unit})`;
 
 	function onScroll() {
-		const { top, bottom } = i.getBoundingClientRect();
+		const top = i?.getBoundingClientRect()?.top || 10000;
+		const bottom = i?.getBoundingClientRect()?.bottom || 10000;
+
 		j = floor((top + bottom) / 2);
 	}
 
