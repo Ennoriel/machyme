@@ -33,8 +33,6 @@
 		const top = i?.getBoundingClientRect()?.top || 10000;
 		const bottom = i?.getBoundingClientRect()?.bottom || 10000;
 
-		console.log(i, top, bottom, (top + bottom) / 2, floor((top + bottom) / 2))
-
 		j = floor((top + bottom) / 2);
 	}
 
