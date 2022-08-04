@@ -16,7 +16,7 @@
 
 <style>
 	main {
-		width: 100vw;
+		width: 100%;
 		padding: 16px;
 		min-height: calc(var(--vh, 1vh) * 100 - 100px);
 	}

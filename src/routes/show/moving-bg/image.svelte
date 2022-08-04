@@ -9,21 +9,23 @@
 	let threshold = 500;
 </script>
 
-<Canvas let:ctx let:rect let:redraw let:pos let:width>
+<Canvas let:ctx let:rect let:redraw let:pos let:width mouseGenerateRedraw>
 	<DistributiveGrid {rect} size={SIZE} let:i let:j let:margin>
-		<ImgPoint
-			{ctx}
-			{pos}
-			{redraw}
-			{width}
-			{i}
-			{j}
-			{margin}
-			size={SIZE}
-			restSize={REST_SIZE}
-			focusSize={FOCUS_SIZE}
-			{threshold}
-		/>
+		{#if ctx}
+			<ImgPoint
+				{ctx}
+				{pos}
+				{redraw}
+				{width}
+				{i}
+				{j}
+				{margin}
+				size={SIZE}
+				restSize={REST_SIZE}
+				focusSize={FOCUS_SIZE}
+				{threshold}
+			/>
+		{/if}
 	</DistributiveGrid>
 </Canvas>
 
