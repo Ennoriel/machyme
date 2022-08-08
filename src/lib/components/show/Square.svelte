@@ -16,8 +16,8 @@
 		y: number;
 	};
 
-	$: x = rect.width * config.center.x;
-	$: y = rect.height * config.center.y;
+	$: x = rect.width * config.center.x * window.devicePixelRatio;
+	$: y = rect.height * config.center.y * window.devicePixelRatio;
 	$: angle = (config.angle * Math.PI) / 180;
 	$: size = config.size;
 	$: halfSize = size / 2;
