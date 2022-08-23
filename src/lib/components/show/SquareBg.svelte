@@ -1,17 +1,10 @@
 <script lang="ts">
+	import { browser } from '$app/env';
 	import Canvas from './Canvas.svelte';
 	import Square from './Square.svelte';
+	import type { SquareConfig } from "../../../routes/show/floating-squares/_squares";
 
-	export let squares: Array<{
-		center: {
-			x: number;
-			y: number;
-		};
-		size: number;
-		angle: number;
-		width: number;
-		color: string;
-	}>;
+	export let squares: Array<SquareConfig>;
 	let ctx: CanvasRenderingContext2D | null | undefined = undefined;
 	export let redraw: number;
 
@@ -20,7 +13,7 @@
 	}
 
 	let wrapper: HTMLDivElement;
-	let getHeight = () => wrapper?.getBoundingClientRect().height;
+	let getHeight = () => (browser && window.innerHeight || 1000) - 60;
 </script>
 
 <div bind:this={wrapper} class="wrapper">
@@ -32,7 +25,7 @@
 		{/if}
 	</Canvas>
 
-	<div class="max-width">
+	<div class="max-width" style:height={`${getHeight()}px`}>
 		<slot />
 	</div>
 </div>

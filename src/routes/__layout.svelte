@@ -33,6 +33,11 @@
 		text-decoration: none;
 	}
 	:global(body) {
+		--color-blue-1: #1C2EFF;
+		--color-blue-2: #000EB2;
+		--color-yellow-1: #FFED32;
+		--color-yellow-2: #B2A642;
+
 		--primary-color: #ed1f3a;
 		--secondary-color: #002395;
 		--text-color: #555;
@@ -42,7 +47,7 @@
 
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
-		font-weight: 300;
+		/*font-weight: 300;*/
 		font-size: 16px;
 		line-height: 1.5em;
 		color: var(--text-color);
@@ -67,7 +72,7 @@
 	:global(h4) {
 		font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
 			Cantarell, 'Helvetica Neue', sans-serif;
-		font-weight: 100;
+		font-weight: 400;
 		margin: 1rem 0 0.5rem 0;
 		line-height: 1;
 	}
