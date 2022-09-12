@@ -1,7 +1,0 @@
-import * as module from '../entries/pages/blog/use-mdsvex.md.js';
-
-export { module };
-export const index = 9;
-export const file = '_app/immutable/pages/blog/use-mdsvex.md-87631259.js';
-export const imports = ["_app/immutable/pages/blog/use-mdsvex.md-87631259.js","_app/immutable/chunks/index-195ca813.js","_app/immutable/chunks/blog.layout-fd87ffc5.js","_app/immutable/chunks/OpenGraph-6b5dfca4.js","_app/immutable/chunks/stores-ae9f7452.js"];
-export const stylesheets = ["_app/immutable/assets/blog-feddd0bd.css"];

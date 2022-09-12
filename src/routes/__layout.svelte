@@ -33,10 +33,10 @@
 		text-decoration: none;
 	}
 	:global(body) {
-		--color-blue-1: #1C2EFF;
-		--color-blue-2: #000EB2;
-		--color-yellow-1: #FFED32;
-		--color-yellow-2: #B2A642;
+		--color-blue-1: #1c2eff;
+		--color-blue-2: #000eb2;
+		--color-yellow-1: #ffed32;
+		--color-yellow-2: #b2a642;
 
 		--primary-color: #ed1f3a;
 		--secondary-color: #002395;
@@ -64,6 +64,7 @@
 			Cantarell, 'Helvetica Neue', sans-serif;
 		font-weight: 300;
 		font-size: 16px;
+		cursor: pointer;
 	}
 
 	:global(h1),

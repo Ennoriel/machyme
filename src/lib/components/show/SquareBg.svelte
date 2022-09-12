@@ -2,7 +2,8 @@
 	import { browser } from '$app/env';
 	import Canvas from './Canvas.svelte';
 	import Square from './Square.svelte';
-	import type { SquareConfig } from "../../../routes/show/floating-squares/_squares";
+	import type { SquareConfig } from '../../../routes/show/floating-squares/_squares';
+	import { SCREEN_SIZE } from '$lib/types/utils.type';
 
 	export let squares: Array<SquareConfig>;
 	let ctx: CanvasRenderingContext2D | null | undefined = undefined;
@@ -13,13 +14,16 @@
 	}
 
 	let wrapper: HTMLDivElement;
-	let getHeight = () => (browser && window.innerHeight || 1000) - 60;
+	let getHeight = () => ((browser && window.innerHeight) || 1000) - 60;
+	let innerWidth: number;
 </script>
+
+<svelte:window bind:innerWidth />
 
 <div bind:this={wrapper} class="wrapper">
 	<Canvas bind:ctx bind:redraw let:ctx let:redraw let:rect {getHeight}>
 		{#if ctx && rect}
-			{#each squares as square}
+			{#each squares.filter((s) => innerWidth > SCREEN_SIZE[s.screen]) as square}
 				<Square {ctx} {redraw} {rect} config={square} />
 			{/each}
 		{/if}
@@ -38,11 +42,17 @@
 	.max-width {
 		max-width: 800px;
 		margin: auto;
-		padding: 16px;
+		padding: 16px 64px;
 	}
 
 	.wrapper :global(canvas) {
 		position: absolute;
 		pointer-events: none;
+	}
+
+	@media (min-width: 640px) {
+		.max-width {
+			padding: 16px 80px;
+		}
 	}
 </style>
