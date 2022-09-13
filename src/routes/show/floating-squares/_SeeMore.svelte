@@ -1,17 +1,20 @@
 <script lang="ts">
 	import ChevronsDown from '$lib/components/icons/ChevronsDown.svelte';
+
+	export let href: string;
 </script>
 
-<button>
+<a {href}>
 	<span><ChevronsDown /></span> Let's go!
-</button>
+</a>
 
 <style>
-	button {
+	a {
 		border: none;
 		background: transparent;
 
-		display: flex;
+		color: var(--text-color);
+		display: inline-flex;
 		align-items: center;
 		gap: 8px;
 		border-radius: 20px;
@@ -32,7 +35,7 @@
 		align-items: center;
 	}
 
-	button::before {
+	a::before {
 		content: '';
 		position: absolute;
 		border-radius: 20px;
@@ -45,7 +48,7 @@
 		transition: all 0.4s;
 	}
 
-	button:hover::before {
+	a:hover::before {
 		width: 100%;
 	}
 </style>

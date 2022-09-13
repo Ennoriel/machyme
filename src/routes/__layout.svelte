@@ -31,6 +31,7 @@
 		color: var(--primary-color);
 		transition: color 0.1s;
 		text-decoration: none;
+		cursor: pointer;
 	}
 	:global(body) {
 		--color-blue-1: #1c2eff;

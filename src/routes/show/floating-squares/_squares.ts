@@ -1,6 +1,6 @@
 import type { ScreenSize } from '$lib/types/utils.type';
 
-export const squaresScreen1 = [
+export const squaresScreen1: Array<SquareConfig> = [
 	{ center: { x: 0.03, y: 0.07 }, size: 285, angle: 45, width: 1, color: '#1C2EFF', screen: 'xs' },
 	{ center: { x: 0.5, y: -0.06 }, size: 285, angle: 25, width: 1, color: '#1C2EFF', screen: 'md' },
 	{ center: { x: 0.7, y: 0.2 }, size: 100, angle: 55, width: 1, color: '#1C2EFF', screen: 'xs' },

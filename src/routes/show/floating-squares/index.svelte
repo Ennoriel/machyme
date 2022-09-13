@@ -23,9 +23,9 @@
 			minimalism.
 		</p>
 	</div>
-	<SeeMore />
+	<SeeMore href="#2"/>
 </SquareBg>
-<SquareBg {squares} bind:redraw>
+<SquareBg {squares} bind:redraw id="2">
 	<div>
 		<h1>Maxime Dupont · <span class="subtitle">personal website</span></h1>
 		<p>
@@ -33,7 +33,7 @@
 			minimalism.
 		</p>
 	</div>
-	<SeeMore />
+	<!-- <SeeMore /> -->
 </SquareBg>
 
 <style>
