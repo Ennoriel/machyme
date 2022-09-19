@@ -1,23 +1,12 @@
-<script lang="ts" context="module">
-	export const prerender = true;
-
-	export const load: import('@sveltejs/kit').Load = async ({ session, params }) => {
-		return {
-			props: {
-				posts: session.posts,
-				keyword: params.keyword
-			}
-		};
-	};
-</script>
-
 <script lang="ts">
+	import type { PageData } from './$types';
 	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
 	import ArticleList from '$lib/components/blog/ArticleList.svelte';
-	import type { BlogPost } from '$lib/types/blogPost.type';
 
-	export let posts: BlogPost[];
-	export let keyword: string;
+	export let data: PageData;
+
+	$: posts = data.props.posts;
+	$: keyword = data.props.keyword;
 </script>
 
 <OpenGraph

@@ -118,21 +118,12 @@ export const handle: Handle = async ({ event, resolve }) => {
 It is displayed in the `/blog/index.html` file:
 
 ```svelte
-<script context="module">
-	export const prerender = true;
-
-	export async function load({ session }) {
-		const posts = session.posts;
-		return { props: { posts } };
-	}
-</script>
-
 <script>
-	export let posts;
+	export let data;
 </script>
 
 <ul>
-	{#each posts as post}
+	{#each data.props.posts as post}
 		<li>
 			<a href={`/blog/${post.slug}`}>{post.title}</a>
 		</li>

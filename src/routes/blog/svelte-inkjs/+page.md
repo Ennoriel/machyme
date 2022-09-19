@@ -65,7 +65,7 @@ export default JSON.stringify(story);
 ```svelte
 <script>
 	import { onMount } from 'svelte';
-	import storyJson from '.$lib/story';
+	import storyJson from '..$lib/story';
 
 	let story;
 	let storyContainer;

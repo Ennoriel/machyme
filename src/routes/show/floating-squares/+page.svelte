@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import SquareBg from '$lib/components/show/SquareBg.svelte';
-	import Customize from './_customize.svelte';
+	// import Customize from './_customize.svelte';
 	import SeeMore from './_SeeMore.svelte';
 	import { squaresScreen1, squaresScreen2 } from './_squares';
 	import type { SquareConfig } from './_squares';

@@ -9,7 +9,7 @@ export const getSession: GetSession = async ({ locals }) => {
 
 export const handle: Handle = async ({ event, resolve }) => {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/routes/blog/*.md')).map(async ([path, page]) => {
+		Object.entries(import.meta.glob('/src/routes/blog/**/*.md')).map(async ([path, page]) => {
 			const { metadata } = (await page()) as { metadata: BlogPost };
 			const filename = path.split('/').pop();
 			return {

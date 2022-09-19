@@ -1,31 +1,31 @@
 main {
-    width: 100%;
-    padding: 16px;
-    min-height: calc(var(--vh, 1vh) * 100 - 100px);
+	width: 100%;
+	padding: 16px;
+	min-height: calc(var(--vh, 1vh) * 100 - 100px);
 }
 
 body {
-    --color-blue-1: #1c2eff;
-    --color-blue-2: #000eb2;
-    --color-yellow-1: #ffed32;
-    --color-yellow-2: #b2a642;
+	--color-blue-1: #1c2eff;
+	--color-blue-2: #000eb2;
+	--color-yellow-1: #ffed32;
+	--color-yellow-2: #b2a642;
 
-    --header-height: 60px;
+	--header-height: 60px;
 
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23dce5ff' fill-opacity='0.41' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23dce5ff' fill-opacity='0.41' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 }
 
 .input-like {
-    padding: 10px 20px 10px 10px;
-    background-color: white;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 0 5px #ccc;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-    margin: 0;
+	padding: 10px 20px 10px 10px;
+	background-color: white;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #ccc;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	margin: 0;
 }
 
 .input-like:hover {
-    background-color: #ddd;
+	background-color: #ddd;
 }

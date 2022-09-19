@@ -1,16 +1,11 @@
-<script lang="ts" context="module">
-	export const load: import('@sveltejs/kit').Load = async ({ session }) => {
-		const posts = session.posts;
-		return { props: { posts } };
-	};
-</script>
-
 <script lang="ts">
-	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
-	import type { BlogPost } from '$lib/types/blogPost.type';
-	export let posts: BlogPost[];
+	import type { PageData } from './$types';
 
-	$: keywords = [...new Set(posts.map(({ keywords }) => keywords).flat())].sort();
+	export let data: PageData;
+
+	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
+
+	$: keywords = [...new Set(data.props.posts.map(({ keywords }) => keywords).flat())].sort();
 </script>
 
 <OpenGraph

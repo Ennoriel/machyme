@@ -18,7 +18,7 @@
 </p>
 
 <p>
-    {LOREM.MAECENAS}
+	{LOREM.MAECENAS}
 </p>
 
 <p>
@@ -150,7 +150,7 @@
 <form>
 	<label>
 		Text
-		<input type="text" placeholder="test" required/>
+		<input type="text" placeholder="test" required />
 	</label>
 	<label>
 		Text disabled
@@ -198,13 +198,11 @@
 			<option>item 3</option>
 		</select>
 	</label>
-	<input id="input-file" type="file"/>
-	<label for="input-file" data-accept=".xml, .json">
-		file
-	</label>
+	<input id="input-file" type="file" />
+	<label for="input-file" data-accept=".xml, .json"> file </label>
 	<label>
 		color
-		<input type="color"/>
+		<input type="color" />
 	</label>
 </form>
 
@@ -219,14 +217,6 @@
 
 <h2>Scroll bar</h2>
 
-<div
-style:height="100px"
-style:width="300px"
-style:overflow="auto"
-style:background-color="white"
->
-	<div
-	style:height="200px"
-	style:width="600px"
-	/>
+<div style:height="100px" style:width="300px" style:overflow="auto" style:background-color="white">
+	<div style:height="200px" style:width="600px" />
 </div>

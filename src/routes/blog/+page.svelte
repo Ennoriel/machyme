@@ -1,16 +1,10 @@
-<script lang="ts" context="module">
-	export const load: import('@sveltejs/kit').Load = async ({ session }) => {
-		const posts = session.posts;
-		return { props: { posts } };
-	};
-</script>
-
 <script lang="ts">
+	import type { PageData } from './$types';
+
+	export let data: PageData;
+
 	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
 	import ArticleList from '$lib/components/blog/ArticleList.svelte';
-	import type { BlogPost } from '$lib/types/blogPost.type';
-
-	export let posts: BlogPost[];
 </script>
 
 <OpenGraph
@@ -22,4 +16,4 @@
 	}}
 />
 
-<ArticleList {posts} />
+<ArticleList posts={data.props.posts} />

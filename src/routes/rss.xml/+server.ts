@@ -10,7 +10,7 @@ function formatDescription(description: string) {
 	return description.replace(/src="\//g, 'src="https://www.machyme.fr/');
 }
 
-export const get: import('@sveltejs/kit').RequestHandler = async ({ locals }) => {
+export const GET: import('@sveltejs/kit').RequestHandler = async ({ locals }) => {
 	const ttlInMin = 360;
 	const posts = locals.posts
 		.map(
@@ -39,11 +39,10 @@ export const get: import('@sveltejs/kit').RequestHandler = async ({ locals }) =>
             </channel>
         </rss>
         `;
-	return {
-		body: rssDocument,
+	return new Response(String(rssDocument), {
 		headers: {
 			'Cache-Control': `max-age=0, s-max-age=${ttlInMin * 60}`,
 			'Content-Type': 'application/rss+xml'
 		}
-	};
+	});
 };

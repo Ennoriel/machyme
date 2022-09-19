@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { fade, draw } from 'svelte/transition';
-	import { toto_paths } from './_path';
+	import { toto_paths } from './path';
 	import { colorRange, randomHexColor } from 'chyme';
 	import ColorPicker, { CircleVariant } from 'svelte-awesome-color-picker';
 	import InputColorPicker from '$lib/components/input/color-picker/InputColorPicker.svelte';

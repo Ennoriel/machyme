@@ -1,4 +1,6 @@
-#blog-article h2, #blog-article h3, #blog-article h4 {
+#blog-article h2,
+#blog-article h3,
+#blog-article h4 {
 	margin-left: var(--md);
 }
 
@@ -11,7 +13,7 @@
 	content: '#';
 	position: absolute;
 	right: var(--xs);
-	transition: color .2s;
+	transition: color 0.2s;
 }
 
 #blog-article h1:hover .icon-link::before,
