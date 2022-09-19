@@ -5,7 +5,7 @@
 	export let redraw = 0;
 	export let pos = { x: -10000, y: -10000 };
 	export let mouseGenerateRedraw = false;
-	export let getWidth = () => document?.body?.getBoundingClientRect()?.width;
+	export let getWidth = () => document?.body?.getBoundingClientRect()?.width - 64;
 	export let getHeight = (width: number | undefined) => (width ? Math.max(300, width / 4) : 500);
 
 	$: if (ctx) resize();

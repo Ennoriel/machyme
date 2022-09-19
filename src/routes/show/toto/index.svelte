@@ -124,6 +124,7 @@
 	svg {
 		display: block;
 		max-width: 500px;
+		max-height: calc(100vh - 150px);
 		margin: -50px;
 	}
 	@media (min-width: 500px) {

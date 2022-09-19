@@ -20,10 +20,12 @@
 	}}
 />
 
-<p style:text-align="right">published {formattedDate}</p>
-<h1>{title}</h1>
+<article id="blog-article">
+	<p style:text-align="right">published {formattedDate}</p>
+	<h1>{title}</h1>
 
-<slot />
+	<slot />
+</article>
 
 <nav aria-label="secondary">
 	<button
@@ -40,10 +42,8 @@
 
 <style>
 	a {
-		border: none;
 		background-color: var(--primary-color);
 		color: white;
-		cursor: pointer;
 		padding: 0.3rem 0.6rem;
 		border-radius: 4px;
 		text-decoration: none;
@@ -54,9 +54,7 @@
 		border: none;
 		background-color: var(--primary-color);
 		color: white;
-		cursor: pointer;
 		padding: 0.3rem 0.6rem;
-		border-radius: 4px;
 		text-decoration: none;
 	}
 

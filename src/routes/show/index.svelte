@@ -1,6 +1,8 @@
 <nav>
 	<h1>Animations</h1>
 	<ul>
+		<li><a href="/show/css-defaults">CSS defaults</a></li>
+		<li><a href="/show/css-tokens">CSS tokens</a></li>
 		<li><a href="/show/before-after">Before-After effect</a></li>
 		<li><a href="/show/floating-squares">Floating squares</a></li>
 		<li><a href="/show/scroll">Image effect on scroll</a></li>

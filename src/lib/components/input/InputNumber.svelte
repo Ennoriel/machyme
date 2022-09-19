@@ -11,16 +11,17 @@
 <style>
 	label {
 		display: flex;
+		flex-direction: row;
 		align-items: center;
 		gap: 8px;
 	}
 	input {
 		height: 20px;
-		width: 40px;
+		width: 50px !important;
 		border-radius: 3px;
 		text-align: center;
 		border: 1px solid #ddd;
-		padding: 0;
+		padding: 2px 4px !important;
 		transition: all 0.2s ease-in-out;
 	}
 	input:focus {

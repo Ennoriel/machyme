@@ -55,11 +55,11 @@ image is blurred with the following formula:
 {' '.repeat(config.effect.name.length)} = {a} * {j} + {b}
 {' '.repeat(config.effect.name.length)} = {res}{config.effect.unit}</pre>
 	<label>
-		a
+		a (intensity)
 		<input type="range" min={config.a.min} max={config.a.max} step={config.a.step} bind:value={a} />
 	</label>
 	<label>
-		b
+		b (offset)
 		<input type="range" min={config.b.min} max={config.b.max} step={config.b.step} bind:value={b} />
 	</label>
 </details>
@@ -82,5 +82,8 @@ image is blurred with the following formula:
 	}
 	label {
 		display: block;
+	}
+	input {
+		width: unset;
 	}
 </style>

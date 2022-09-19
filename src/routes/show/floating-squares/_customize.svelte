@@ -21,7 +21,8 @@
 				size: 300 * Math.random(),
 				angle: 90 * Math.random(),
 				width: 1,
-				color: '#1C2EFF'
+				color: '#1C2EFF',
+				screen: 'xs'
 			}
 		];
 	}

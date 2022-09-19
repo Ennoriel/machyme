@@ -5,7 +5,6 @@
 	import type { SquareConfig } from '../../../routes/show/floating-squares/_squares';
 	import { SCREEN_SIZE } from '$lib/types/utils.type';
 
-	export let id: string | undefined = undefined;
 	export let squares: Array<SquareConfig>;
 	let ctx: CanvasRenderingContext2D | null | undefined = undefined;
 	export let redraw: number;
@@ -21,7 +20,7 @@
 
 <svelte:window bind:innerWidth />
 
-<div bind:this={wrapper} class="wrapper" {id}>
+<div bind:this={wrapper} class="wrapper">
 	<Canvas bind:ctx bind:redraw let:ctx let:redraw let:rect {getHeight}>
 		{#if ctx && rect}
 			{#each squares.filter((s) => innerWidth > SCREEN_SIZE[s.screen]) as square}

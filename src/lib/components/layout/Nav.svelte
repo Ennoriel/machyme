@@ -50,6 +50,10 @@
 		text-decoration: none;
 	}
 
+	a:hover {
+		text-decoration: none;
+	}
+
 	@media (min-width: 768px) {
 		a {
 			padding: 0 1rem;

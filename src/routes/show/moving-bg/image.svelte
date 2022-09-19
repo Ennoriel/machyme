@@ -9,7 +9,7 @@
 	let threshold = 500;
 </script>
 
-<Canvas let:ctx let:rect let:redraw let:pos let:width mouseGenerateRedraw>
+<Canvas let:ctx let:rect let:redraw let:pos let:width mouseGenerateRedraw getHeight={() => 250}>
 	<DistributiveGrid {rect} size={SIZE} let:i let:j let:margin>
 		{#if ctx}
 			<ImgPoint
