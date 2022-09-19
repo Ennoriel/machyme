@@ -1,3 +1,5 @@
+import { getPosts } from '$lib/server/posts';
+
 function formatDate(date: string) {
 	return new Date(Date.parse(date)).toLocaleDateString(undefined, {
 		year: 'numeric',
@@ -10,9 +12,10 @@ function formatDescription(description: string) {
 	return description.replace(/src="\//g, 'src="https://www.machyme.fr/');
 }
 
-export const GET: import('@sveltejs/kit').RequestHandler = async ({ locals }) => {
+export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 	const ttlInMin = 360;
-	const posts = locals.posts
+    const posts = await getPosts();
+	const rssPosts = posts
 		.map(
 			(entry) => `
                 <item>
@@ -31,11 +34,11 @@ export const GET: import('@sveltejs/kit').RequestHandler = async ({ locals }) =>
                 <title>Machyme blog articles</title>
                 <description>New blog articles</description>
                 <link>https://www.machyme.fr/blog/</link>
-                <lastBuildDate>${new Date(locals.posts[0].date).toUTCString()}</lastBuildDate>
-                <pubDate>${new Date(locals.posts[0].date).toUTCString()}</pubDate>
+                <lastBuildDate>${new Date(posts[0].date).toUTCString()}</lastBuildDate>
+                <pubDate>${new Date(posts[0].date).toUTCString()}</pubDate>
                 <ttl>${ttlInMin}</ttl>
                 <atom:link href="https://www.machyme.fr/changelog/rss.xml" rel="self" type="application/rss+xml" />
-                ${posts}
+                ${rssPosts}
             </channel>
         </rss>
         `;

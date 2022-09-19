@@ -1,9 +1,10 @@
+import { getPosts } from '$lib/server/posts';
 export const prerender = true;
 
-export const load: import('@sveltejs/kit').Load = async ({ session, params }) => {
+export const load: import('@sveltejs/kit').Load = async ({ params }) => {
 	return {
 		props: {
-			posts: session.posts,
+			posts: await getPosts(),
 			keyword: params.keyword
 		}
 	};
