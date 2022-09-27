@@ -14,7 +14,7 @@ function formatDescription(description: string) {
 
 export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 	const ttlInMin = 360;
-    const posts = await getPosts();
+	const posts = await getPosts();
 	const rssPosts = posts
 		.map(
 			(entry) => `

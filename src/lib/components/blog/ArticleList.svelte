@@ -24,8 +24,9 @@
 	}, x);
 </script>
 
+<h1>Publications</h1>
 {#if groups.latest.length && groups.oldest.length}
-	<h1>Latest publications</h1>
+	<h2>Latest publications</h2>
 {/if}
 {#if groups.latest.length}
 	<ul>
@@ -37,7 +38,7 @@
 	</ul>
 {/if}
 {#if groups.latest.length && groups.oldest.length}
-	<h1>Published earlier</h1>
+	<h2>Published earlier</h2>
 {/if}
 {#if groups.oldest.length}
 	<ul>
@@ -49,7 +50,7 @@
 	</ul>
 {/if}
 
-<h1>RSS</h1>
+<h2>RSS</h2>
 
 <a href="/rss.xml">subscribe to RSS 🧠🚀</a>
 

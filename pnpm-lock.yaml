@@ -6,7 +6,7 @@ specifiers:
   '@sveltejs/kit': 1.0.0-next.487
   '@typescript-eslint/eslint-plugin': ^5.38.0
   '@typescript-eslint/parser': ^5.38.0
-  chyme: ^1.2.6
+  chyme: ^1.3.1
   eslint: ^8.23.1
   eslint-config-prettier: ^8.5.0
   eslint-plugin-svelte3: ^4.0.0
@@ -32,7 +32,7 @@ devDependencies:
   '@sveltejs/kit': 1.0.0-next.487_svelte@3.50.1+vite@3.1.3
   '@typescript-eslint/eslint-plugin': 5.38.0_wsb62dxj2oqwgas4kadjymcmry
   '@typescript-eslint/parser': 5.38.0_irgkl5vooow2ydyo6aokmferha
-  chyme: 1.2.6
+  chyme: 1.3.1
   eslint: 8.23.1
   eslint-config-prettier: 8.5.0_eslint@8.23.1
   eslint-plugin-svelte3: 4.0.0_rhh4tpcyg7zwtq6pdnkzw5gxma
@@ -576,8 +576,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chyme/1.2.6:
-    resolution: {integrity: sha512-rhJkFNMWOBk960MQqWiuYgbAoYAT5j+Iv1pEGgy9OApCCzIgfk+r7495FjX32zrnjB6OpLiEqVMZCoaM0CpLpg==}
+  /chyme/1.3.1:
+    resolution: {integrity: sha512-/0moBbwpnCcubYTKkR92hryn4o2UAj0eWsYjUKWsYUgALS1gjpEJh8DWNkpp3qwPtPFkcsNH5WbEF5w/IzZDKw==}
     dependencies:
       form-data-to-object: 0.2.0
     dev: true
@@ -1939,7 +1939,7 @@ packages:
   /svelte-awesome-color-picker/1.2.3:
     resolution: {integrity: sha512-PDHIidCO4QzaxGvXMHLruB4ayXLmGEzVQlJcG2XA15S2A0p/hJR9s3ce5PW+0JiWQEtYxV/HTdgNa360hwnPcQ==}
     dependencies:
-      chyme: 1.2.6
+      chyme: 1.3.1
     dev: true
 
   /svelte-check/2.9.0_svelte@3.50.1:

@@ -1,11 +1,5 @@
 <script lang="ts">
-	import type { PageData } from './$types';
-
-	export let data: PageData;
-
 	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
-
-	$: keywords = [...new Set(data.props.posts.map(({ keywords }) => keywords).flat())].sort();
 </script>
 
 <OpenGraph
@@ -18,29 +12,21 @@
 />
 
 <div>
-	<h1>Hello, it's me!</h1>
+	<h1>Hello, it's me, Maxime!</h1>
 
 	<p>
-		A minimalist blog written by a minimalist developer that enjoys building software for a more
-		sustainable & accessible web.
+		You are reading a minimalist blog written by a developer that enjoys building software for a
+		more sustainable & accessible web. I am sharing tips on how to solve some challenges
+		(performance, <abbr title="Search Engine Optimization">SEO</abbr>, accessibility, responsive...)
+		while implementing it on this same website.
 	</p>
 
-	<p>Built with no external fonts, stylesheets or cookies.</p>
-
-	<p>Subjects that I already wrote about:</p>
-
-	<ul>
-		{#each keywords as keyword}
-			<li>
-				<a href={`/blog/${keyword}`}>{keyword}</a>
-			</li>
-		{/each}
-	</ul>
+	<p>I love Svelte, Typescript and Python.</p>
 </div>
 
 <style>
 	div {
-		max-width: 800px;
+		max-width: 600px;
 		margin: auto;
 	}
 </style>

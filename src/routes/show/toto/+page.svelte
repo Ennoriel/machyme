@@ -33,7 +33,6 @@
 	}
 
 	function delayChange() {
-		console.log('delayChange', delay);
 		clearInterval(intervalId);
 		if (delay) {
 			intervalId = window.setInterval(() => (x = x + 1), delay);
@@ -91,6 +90,7 @@
 			{/each}
 		</g>
 	</svg>
+	<p>Image from <a href="https://www.instagram.com/toto_le_voyou/">toto le voyou</a>.</p>
 {/if}
 
 <style>
@@ -101,14 +101,17 @@
 		justify-content: center;
 		margin: 16px;
 	}
+
 	.commands :global(.wrapper) {
 		top: 192px;
 	}
+
 	@media (min-width: 720px) {
 		.commands :global(.wrapper) {
 			left: 72px;
 		}
 	}
+
 	button {
 		padding: 10px 20px 10px 10px;
 		background-color: white;
@@ -118,18 +121,25 @@
 		cursor: pointer;
 		transition: background-color 0.2s ease-in-out;
 	}
+
 	button:hover {
 		background-color: #ddd;
 	}
+
 	svg {
 		display: block;
 		max-width: 500px;
-		max-height: calc(100vh - 150px);
+		max-height: calc(100vh - 160px);
 		margin: -50px;
 	}
+
 	@media (min-width: 500px) {
 		svg {
 			margin: -50px auto;
 		}
+	}
+	
+	p {
+		text-align: center;
 	}
 </style>
