@@ -138,7 +138,7 @@
 			margin: -50px auto;
 		}
 	}
-	
+
 	p {
 		text-align: center;
 	}
