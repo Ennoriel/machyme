@@ -148,6 +148,12 @@
 
 <h2>Form</h2>
 <form>
+	<fieldset>
+		<label for="demo">
+			Text
+		</label>
+		<input id="demo" type="text" placeholder="test" required />
+	</fieldset>
 	<label>
 		Text
 		<input type="text" placeholder="test" required />
