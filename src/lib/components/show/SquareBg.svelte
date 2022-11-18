@@ -13,14 +13,13 @@
 		ctx?.clearRect(0, 0, 1000000, 1000000);
 	}
 
-	let wrapper: HTMLDivElement;
 	let getHeight = () => ((browser && window.innerHeight) || 1000) - 60 + 16;
 	let innerWidth: number;
 </script>
 
 <svelte:window bind:innerWidth />
 
-<div bind:this={wrapper} class="wrapper">
+<div class="wrapper">
 	<Canvas bind:ctx bind:redraw let:ctx let:redraw let:rect {getHeight}>
 		{#if ctx && rect}
 			{#each squares.filter((s) => innerWidth > SCREEN_SIZE[s.screen]) as square}

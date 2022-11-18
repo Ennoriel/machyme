@@ -17,7 +17,7 @@
 	const img = new Image();
 	img.src = '/art.svg';
 
-	function draw(ratio: number, gap: number, squareSize: number) {
+	function draw(_ratio: number, gap: number, squareSize: number) {
 		const imgRatio = (width / 1150) * window.devicePixelRatio;
 		ctx.clearRect(margin.width + size * i, margin.height + size * j, size, size);
 		ctx.drawImage(

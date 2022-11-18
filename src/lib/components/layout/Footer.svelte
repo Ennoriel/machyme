@@ -1,9 +1,11 @@
 <footer>
 	<ul>
 		<li>
-			<a target="_blank" href="https://www.linkedin.com/in/maxime-dupont-dev/">🤙 LinkedIn</a>
+			<a target="_blank" href="https://www.linkedin.com/in/maxime-dupont-dev/" rel="noreferrer"
+				>🤙 LinkedIn</a
+			>
 		</li>
-		<li><a target="_blank" href="https://github.com/Ennoriel/">🐙 Github</a></li>
+		<li><a target="_blank" href="https://github.com/Ennoriel/" rel="noreferrer">🐙 Github</a></li>
 	</ul>
 </footer>
 

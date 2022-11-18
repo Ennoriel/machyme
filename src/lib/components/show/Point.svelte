@@ -18,9 +18,6 @@
 		y: size * (j + 0.5)
 	};
 
-	const img = new Image();
-	img.src = '/wallpaper.jpg';
-
 	let distanceX, distanceY, distance, ratio, position, squareSize, flooredGap, flooredSquareSize;
 
 	$: if (redraw) {

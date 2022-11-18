@@ -3,8 +3,7 @@
 	import { fade, draw } from 'svelte/transition';
 	import { toto_paths } from './path';
 	import { colorRange, randomHexColor } from 'chyme';
-	import ColorPicker, { CircleVariant } from 'svelte-awesome-color-picker';
-	import InputColorPicker from '$lib/components/input/color-picker/InputColorPicker.svelte';
+	import ColorPicker from 'svelte-awesome-color-picker';
 	import InputNumber from '$lib/components/input/InputNumber.svelte';
 
 	export let visible: boolean;
@@ -54,16 +53,8 @@
 	<InputNumber label="Duration" bind:value={duration} on:keyup={delayChange} />
 
 	{#if loaded}
-		<ColorPicker
-			bind:hex={c1}
-			components={{ ...CircleVariant, input: InputColorPicker }}
-			label="Start color"
-		/>
-		<ColorPicker
-			bind:hex={c2}
-			components={{ ...CircleVariant, input: InputColorPicker }}
-			label="End color"
-		/>
+		<ColorPicker bind:hex={c1} label="Start color" />
+		<ColorPicker bind:hex={c2} label="End color" />
 	{:else}
 		<div class="input-like" style:width="140px" />
 		<div class="input-like" style:width="140px" />
@@ -102,6 +93,15 @@
 		margin: 16px;
 	}
 
+	.commands :global(.color-picker) {
+		position: static;
+	}
+
+	.commands :global(.color-picker label) {
+		flex-direction: row;
+		margin: 0;
+	}
+
 	.commands :global(.wrapper) {
 		top: 192px;
 	}
@@ -112,7 +112,8 @@
 		}
 	}
 
-	button {
+	button,
+	.commands :global(.color-picker label) {
 		padding: 10px 20px 10px 10px;
 		background-color: white;
 		border: none;
@@ -122,7 +123,8 @@
 		transition: background-color 0.2s ease-in-out;
 	}
 
-	button:hover {
+	button:hover,
+	.commands :global(.color-picker label:hover) {
 		background-color: #ddd;
 	}
 

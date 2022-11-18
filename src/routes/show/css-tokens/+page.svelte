@@ -19,9 +19,9 @@
 	};
 </script>
 
-{#each ['xs', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl', '7xl', '8xl', '9xl', '10xl', '11xl', '12xl'] as size}
+{#each Object.entries(SIZES) as [size, px]}
 	<div style:width="var(--{size})">
-		<p style:font-size="var(--font-sm)">{size}-{SIZES[size]}px</p>
+		<p style:font-size="var(--font-sm)">{size}-{px}px</p>
 	</div>
 {/each}
 
