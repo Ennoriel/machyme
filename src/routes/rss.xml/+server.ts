@@ -17,7 +17,7 @@ export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 		posts
 	});
 
-	return new Response(String(rss), {
+	return new Response(rss, {
 		headers: {
 			'Cache-Control': `max-age=0, s-max-age=${ttlInMin * 60}`,
 			'Content-Type': 'application/rss+xml'
