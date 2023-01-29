@@ -15,16 +15,18 @@
 	}}
 />
 
-<p>
-	<strong>Hi, I'm Maxime, a frontend engineer.</strong> I've been building website for 7 years. I have
-	always placed great importance on SEO, accessibility and performance issues. This blog is a place where
-	I intend to share some tips and some longer insights on web development.
-</p>
-
-<p>
-	Feel free to <a href="mailto:m.dupont103@gmail.com">contact me</a> if you want me to prototype, extend
-	or review your project .
-</p>
+<div style:margin-top="0">
+	<p>
+		<strong>Hi, I'm Maxime, a frontend engineer.</strong> I've been building website for 7 years. I have
+		always placed great importance on SEO, accessibility and performance issues. This blog is a place where
+		I intend to share some tips and some longer insights on web development.
+	</p>
+	
+	<p>
+		Feel free to <a href="mailto:m.dupont103@gmail.com">contact me</a> if you want me to prototype, extend
+		or review your project .
+	</p>
+</div>
 
 <h1 style:margin-top="64px">Publications</h1>
 
@@ -66,7 +68,7 @@
 	div::before {
 		content: '';
 		position: absolute;
-		width: var(--100vw);
+		width: var(--100vw, 99vw);
 		left: 50%;
 		top: 0;
 		bottom: 0;

@@ -20,7 +20,11 @@
 <nav aria-label="primary">
 	<a href="#content" class="skip-link"> Go to main content </a>
 	<span style:flex-grow="2">
-		<a href="/" aria-current={($page.url.pathname === '/' && 'page') || undefined}>
+		<a
+			href="/"
+			aria-current={($page.url.pathname === '/' && 'page') || undefined}
+			style:font-size="18px"
+		>
 			<span style:color="black">Maxime</span> Dupont
 		</a>
 	</span>

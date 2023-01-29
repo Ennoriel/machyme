@@ -19,7 +19,7 @@ body {
 
 @media screen and (min-width: 768px) {
 	body {
-		--header-height: 120px;
+		--header-height: 140px;
 	}
 }
 

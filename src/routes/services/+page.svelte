@@ -6,8 +6,8 @@
 </strong> -->
 
 <p>
-	I help both companies and startups focus on their area of expertise by building a fast
-	user-oriented website that can leverage their product or service. I also extend or review existing
+	I help both companies and startups focus on their area of expertise by building fast
+	user-oriented websites that can leverage their product or service. I also extend or review existing
 	websites to improve user experience or performance and save time and stress on the long run.
 </p>
 <blockquote>
