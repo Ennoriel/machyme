@@ -14,7 +14,8 @@
 {#each displayPosts as post}
 	<div>
 		<h2>
-			<span style:color="var(--primary-color)">·&nbsp;·&nbsp;·&nbsp;</span> {post.title}
+			<span style:color="var(--primary-color)">·&nbsp;·&nbsp;·&nbsp;</span>
+			{post.title}
 		</h2>
 		<p style:color="#789">
 			{formatDate(post.date)}

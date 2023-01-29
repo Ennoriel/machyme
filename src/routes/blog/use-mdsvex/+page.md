@@ -101,7 +101,6 @@ type BlogPost = {
 	title: string;
 };
 
-
 export const load = (async () => {
 	const posts = await Promise.all(
 		Object.entries(import.meta.glob('/src/routes/blog/**/*.md')).map(async ([path, page]) => {

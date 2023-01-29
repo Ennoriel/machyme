@@ -22,7 +22,8 @@
 </p>
 
 <p>
-	Feel free to <a href="mailto:m.dupont103@gmail.com">contact me</a> if you want me to prototype, extend or review your project .
+	Feel free to <a href="mailto:m.dupont103@gmail.com">contact me</a> if you want me to prototype, extend
+	or review your project .
 </p>
 
 <h1 style:margin-top="64px">Publications</h1>
