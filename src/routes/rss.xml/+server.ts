@@ -1,5 +1,5 @@
 import { getRss } from 'chyme';
-import { getPosts } from '$lib/server/posts';
+import { getPosts } from '$lib/server/static';
 
 export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 	const ttlInMin = 24 * 60;
