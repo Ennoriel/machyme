@@ -11,22 +11,24 @@
 		.filter((_, index) => !top3 || index < 3);
 </script>
 
-{#each displayPosts as post}
-	<div>
-		<h2>
-			<span style:color="var(--primary-color)">·&nbsp;·&nbsp;·&nbsp;</span>
-			{post.title}
-		</h2>
-		<p style:color="#789">
-			{formatDate(post.date)}
-		</p>
-		<p>
-			{post.description}
-		</p>
-		<Keywords keywords={post.keywords} />
-		<a href={`/blog/${post.slug}`}> Read more </a>
-	</div>
-{/each}
+<section>
+	{#each displayPosts as post}
+		<div>
+			<h2>
+				<span style:color="var(--primary-color)">·&nbsp;·&nbsp;·&nbsp;</span>
+				{post.title}
+			</h2>
+			<p style:color="#789">
+				{formatDate(post.date)}
+			</p>
+			<p>
+				{post.description}
+			</p>
+			<Keywords keywords={post.keywords} />
+			<a href={`/blog/${post.slug}`}> Read more </a>
+		</div>
+	{/each}
+</section>
 
 {#if !top3}
 	<a href="/rss.xml">subscribe to RSS 🧠🚀</a>

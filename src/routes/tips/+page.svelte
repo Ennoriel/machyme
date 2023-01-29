@@ -1,5 +1,4 @@
 <script lang="ts">
-
 	import Keywords from '$lib/components/blog/Keywords.svelte';
 	import { formatDate } from 'chyme';
 	import type { PageData } from './$types';
@@ -35,7 +34,8 @@
 		margin-bottom: 96px;
 	}
 
-	h2, li :global(.keywords) {
+	h2,
+	li :global(.keywords) {
 		display: inline-block;
 		vertical-align: bottom;
 		margin-bottom: 0;
@@ -51,6 +51,6 @@
 		margin: 0 -4px 0 -8px;
 		padding: 2px 12px;
 		border-radius: 16px 8px / 8px 16px;
-		background: linear-gradient(to right,#ff029e12,#ff029e24 20%,#ff029e12);
+		background: linear-gradient(to right, #ff029e12, #ff029e24 20%, #ff029e12);
 	}
 </style>

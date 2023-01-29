@@ -1,7 +1,7 @@
 main {
 	max-width: 800px;
 	margin: auto;
-	padding: 16px;
+	padding: 0 16px 16px 16px;
 	min-height: calc(var(--vh, 1vh) * 100 - 161px);
 }
 
@@ -11,10 +11,16 @@ body {
 	--focus-color: #ff029e;
 	--text-color: #345;
 
-	--header-height: 120px;
-
 	--bg-hatched: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAhSURBVBhXY/gPBq+ffQCSIA6EBeLAWUDACMQMYPDm+UcAnFYo6+2nYfgAAAAASUVORK5CYII=)
 		repeat;
+
+	--header-height: 90px;
+}
+
+@media screen and (min-width: 768px) {
+	body {
+		--header-height: 120px;
+	}
 }
 
 .input-like {

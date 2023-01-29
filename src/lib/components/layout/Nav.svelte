@@ -41,8 +41,14 @@
 		max-width: 800px;
 		padding: 0 8px;
 		margin: auto;
-		gap: 48px;
+		gap: 8px;
 		color: var(--primary-color);
+	}
+
+	@media screen and (min-width: 768px) {
+		nav {
+			gap: 64px;
+		}
 	}
 
 	a {
