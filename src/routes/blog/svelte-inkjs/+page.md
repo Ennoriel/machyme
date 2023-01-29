@@ -1,4 +1,5 @@
 ---
+layout: blog
 date: Sun Jul 10 2022 17:12:22 GMT+0200 (UTC)
 slug: svelte-inkjs
 title: 'Write interactive stories with InkJs & SvelteKit 🎢'
@@ -6,12 +7,12 @@ description: 'How to integrate InkJs in a new skeleton SvelteKit project: a fast
 keywords:
   - svelte
   - inkjs
-  - 'universal module definition (UMD)'
+  - 'universal module definition'
 ---
 
 ## What is InkJs?
 
-InkJs is javascript port of [Ink](https://github.com/y-lohse/inkjs) library. [Ink](https://github.com/inkle/ink) is inkle's scripting language for writing interactive narrative, both for text-centric games as well as more graphical games that contain highly branching stories. It's designed to be easy to learn, but with powerful enough features to allow an advanced level of structuring.
+InkJs is the javascript port of the [Ink](https://github.com/y-lohse/inkjs) library. [Ink](https://github.com/inkle/ink) is a scripting language for writing interactive narrative, both for text-centric games as well as more graphical games that contain highly branching stories. It's designed to be easy to learn, but with powerful enough features to allow an advanced level of structuring.
 
 ## Setup
 
@@ -91,9 +92,6 @@ export default JSON.stringify(story);
 		/** ... */
 	}
 </script>
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
 
 <div bind:this={storyContainer} />
 ```

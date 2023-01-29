@@ -45,7 +45,7 @@
 		margin-top: 200px;
 	}
 	.subtitle {
-		color: var(--color-blue-1);
+		color: #1c2eff;
 		display: block;
 	}
 	@media (min-width: 640px) {

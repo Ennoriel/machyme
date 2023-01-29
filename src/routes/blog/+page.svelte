@@ -16,4 +16,6 @@
 	}}
 />
 
-<ArticleList posts={data.props.posts} />
+<h1>Publications</h1>
+
+<ArticleList posts={data.posts} />

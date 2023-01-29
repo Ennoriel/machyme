@@ -28,7 +28,7 @@
 		aspect-ratio: 1;
 		border-radius: 50%;
 		background-color: var(--color-yellow-1);
-		color: var(--color-blue-1);
+		color: #1c2eff;
 		padding: 8px;
 
 		display: flex;

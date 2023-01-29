@@ -1,14 +1,9 @@
 <script>
 	import OpenGraph from '../components/layout/OpenGraph.svelte';
+	import { formatDate } from 'chyme';
 	import './blog.layout.css';
 
 	const { date, title, description, keywords } = $$restProps;
-
-	$: formattedDate = new Intl.DateTimeFormat('en-US', {
-		year: 'numeric',
-		month: 'long',
-		day: 'numeric'
-	}).format(new Date(date));
 </script>
 
 <OpenGraph
@@ -20,25 +15,12 @@
 	}}
 />
 
-<article id="blog-article">
-	<p style:text-align="right">published {formattedDate}</p>
+<article class="blog-article">
 	<h1>{title}</h1>
+	<p>published {formatDate(date)}</p>
 
 	<slot />
 </article>
-
-<nav aria-label="secondary">
-	<button
-		on:click={() => {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}}
-	>
-		Scroll to the top of the page
-	</button>
-
-	<a href="/blog">Go back to the list of articles</a>
-</nav>
 
 <style>
 	a {

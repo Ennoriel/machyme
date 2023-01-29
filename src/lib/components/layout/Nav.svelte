@@ -3,21 +3,27 @@
 
 	const routes = [
 		{
-			label: '🏡Home',
-			path: '/'
-		},
-		{
-			label: '📜Blog',
+			label: 'Blog',
 			path: '/blog'
 		},
 		{
-			label: '🔭Show',
-			path: '/show'
+			label: 'Tips',
+			path: '/tips'
+		},
+		{
+			label: 'Services',
+			path: '/services'
 		}
 	];
 </script>
 
 <nav aria-label="primary">
+	<a href="#content" class="skip-link"> Go to main content </a>
+	<span style:flex-grow="2">
+		<a href="/" aria-current={($page.url.pathname === '/' && 'page') || undefined}>
+			<span style:color="black">Maxime</span> Dupont
+		</a>
+	</span>
 	{#each routes as route}
 		{@const active = $page.url.pathname === route.path}
 		<a href={route.path} aria-current={(active && 'page') || undefined}>
@@ -25,42 +31,40 @@
 		</a>
 	{/each}
 </nav>
-<hr />
 
 <style>
 	nav {
 		display: flex;
-		justify-content: space-around;
+		justify-content: space-between;
 		align-items: center;
-		height: 60px;
-		max-width: 800px;
+		height: var(--header-height);
+		max-width: 752px;
+		padding: 0 8px;
 		margin: auto;
-	}
-
-	hr {
-		border: 0;
-		border-bottom: 0.1px solid var(--text-color);
+		gap: 48px;
+		color: var(--primary-color);
 	}
 
 	a {
-		height: 40px;
-		line-height: 40px;
-
-		color: inherit;
-		text-decoration: none;
-	}
-
-	a:hover {
-		text-decoration: none;
+		padding: 4px 8px;
+		border-radius: 8px;
+		transition: color 0.2s;
 	}
 
 	@media (min-width: 768px) {
-		a {
-			padding: 0 1rem;
-			letter-spacing: 0.5rem;
-		}
 		a:hover {
 			color: var(--primary-color);
 		}
+	}
+
+	.skip-link {
+		position: absolute;
+		top: -100px;
+		padding: 4px 8px;
+		opacity: 0;
+	}
+	.skip-link:focus {
+		top: 10px;
+		opacity: 1;
 	}
 </style>

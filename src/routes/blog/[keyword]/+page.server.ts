@@ -1,10 +1,9 @@
-import { getPosts } from '$lib/server/posts';
 import type { PageServerLoad } from './$types';
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, parent }) => {
 	return {
 		props: {
-			posts: await getPosts(),
+			posts: (await parent()).posts,
 			keyword: params.keyword
 		}
 	};

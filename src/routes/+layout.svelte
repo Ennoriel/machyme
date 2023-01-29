@@ -15,7 +15,7 @@
 
 <Nav />
 
-<main>
+<main id="content">
 	<slot />
 </main>
 
