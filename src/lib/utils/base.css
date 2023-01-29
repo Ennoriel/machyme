@@ -1,5 +1,5 @@
 main {
-	max-width: 752px;
+	max-width: 800px;
 	margin: auto;
 	padding: 16px;
 	min-height: calc(var(--vh, 1vh) * 100 - 161px);

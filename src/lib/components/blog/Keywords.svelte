@@ -3,7 +3,7 @@
 </script>
 
 {#if keywords?.length}
-	<ul>
+	<ul class="keywords">
 		{#each keywords as keyword}
 			<li>
 				{keyword}

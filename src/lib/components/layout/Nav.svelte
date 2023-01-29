@@ -38,7 +38,7 @@
 		justify-content: space-between;
 		align-items: center;
 		height: var(--header-height);
-		max-width: 752px;
+		max-width: 800px;
 		padding: 0 8px;
 		margin: auto;
 		gap: 48px;

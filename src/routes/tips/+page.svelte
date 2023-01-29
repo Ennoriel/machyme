@@ -1,4 +1,5 @@
 <script lang="ts">
+
 	import Keywords from '$lib/components/blog/Keywords.svelte';
 	import { formatDate } from 'chyme';
 	import type { PageData } from './$types';
@@ -9,12 +10,16 @@
 
 <h1>Tips & tricks</h1>
 
+<blockquote>
+	In this page I'll share some tips and tricks that I have found while figuring out how things work.
+</blockquote>
+
 <ul>
-	{#each data.tips as tip}
+	{#each data.tips as tip, index}
 		<li>
-			<h2>{tip.title}</h2>
-			<p>{formatDate(tip.date)}</p>
+			<h2><em>Tip #{data.tips.length - index}</em> - {tip.title}</h2>
 			<Keywords keywords={tip.technologies} />
+			<p style:color="#789" style:margin-top="8px">{formatDate(tip.date)}</p>
 			<svelte:component this={m[tip.component]} />
 		</li>
 	{/each}
@@ -27,5 +32,25 @@
 
 	li {
 		list-style: none;
+		margin-bottom: 96px;
+	}
+
+	h2, li :global(.keywords) {
+		display: inline-block;
+		vertical-align: bottom;
+		margin-bottom: 0;
+		margin-right: 8px;
+	}
+
+	li :global(.keywords) {
+		margin-bottom: -2px;
+	}
+
+	em {
+		text-decoration: none;
+		margin: 0 -4px 0 -8px;
+		padding: 2px 12px;
+		border-radius: 16px 8px / 8px 16px;
+		background: linear-gradient(to right,#ff029e12,#ff029e24 20%,#ff029e12);
 	}
 </style>
