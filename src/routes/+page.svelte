@@ -1,18 +1,13 @@
 <script lang="ts">
 	import ArticleList from '$lib/components/blog/ArticleList.svelte';
-	import OpenGraph from '$lib/components/layout/OpenGraph.svelte';
+	import { Seo } from 'chyme-svelte';
 	import type { PageData } from './$types';
-
 	export let data: PageData;
 </script>
 
-<OpenGraph
-	data={{
-		description:
-			'The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz.',
-		title: 'Machyme - dev blog',
-		keywords: 'blog, tutorial, news, articles'
-	}}
+<Seo
+	description="The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz"
+	title= "Machyme - dev blog"
 />
 
 <div style:margin-top="0">

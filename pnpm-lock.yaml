@@ -6,6 +6,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.49.0
   '@typescript-eslint/parser': ^5.49.0
   chyme: ^1.3.10
+  chyme-svelte: ^1.3.0
   eslint: ^8.32.0
   eslint-config-prettier: ^8.6.0
   eslint-plugin-svelte3: ^4.0.0
@@ -28,6 +29,7 @@ devDependencies:
   '@typescript-eslint/eslint-plugin': 5.49.0_iu322prlnwsygkcra5kbpy22si
   '@typescript-eslint/parser': 5.49.0_7uibuqfxkfaozanbtbziikiqje
   chyme: 1.3.10
+  chyme-svelte: 1.3.0
   eslint: 8.32.0
   eslint-config-prettier: 8.6.0_eslint@8.32.0
   eslint-plugin-svelte3: 4.0.0_tmo5zkisvhu6htudosk5k7m6pu
@@ -750,6 +752,10 @@ packages:
   /chownr/2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /chyme-svelte/1.3.0:
+    resolution: {integrity: sha512-aSVW7sU2Ea27aBcVQ4GDiQY+iFuLbDnAXrPD7mF9JJkvcGpJBRK9cLxxfKWZeH34eHS0YGPsWUgwMegH+kuvtQ==}
     dev: true
 
   /chyme/1.3.10:

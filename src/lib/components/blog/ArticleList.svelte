@@ -16,16 +16,15 @@
 		<div>
 			<h2>
 				<span style:color="var(--primary-color)">·&nbsp;·&nbsp;·&nbsp;</span>
-				{post.title}
+				<a href={`/blog/${post.slug}`}>{post.title}</a>
 			</h2>
-			<p style:color="#789">
+			<p style:color="var(--grey-text-color)">
 				{formatDate(post.date)}
 			</p>
 			<p>
 				{post.description}
 			</p>
 			<Keywords keywords={post.keywords} />
-			<a href={`/blog/${post.slug}`}> Read more </a>
 		</div>
 	{/each}
 </section>
@@ -58,5 +57,13 @@
 	a {
 		padding: 4px;
 		margin-left: -4px;
+		color: var(--text-color);
+		transition: all .2s;
+	}
+	a:hover {
+		color: var(--link-color);
+	}
+	a:hover::after {
+		transform: scaleX(0);
 	}
 </style>

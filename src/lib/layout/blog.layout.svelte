@@ -1,18 +1,16 @@
 <script>
-	import OpenGraph from '../components/layout/OpenGraph.svelte';
+	import { Seo } from 'chyme-svelte';
 	import { formatDate } from 'chyme';
 	import './blog.layout.css';
 
-	const { date, title, description, keywords } = $$restProps;
+	const { date, title, description } = $$restProps;
 </script>
 
-<OpenGraph
-	data={{
-		title,
-		description,
-		keywords,
-		type: 'article'
-	}}
+<Seo
+	{title}
+	{description}
+	date={new Date(date).toISOString().slice(0,10)}
+	type="article"
 />
 
 <article class="blog-article">

@@ -6,10 +6,11 @@ main {
 }
 
 body {
-	--primary-color: #ff029e;
-	--link-color: #ff029e;
-	--focus-color: #ff029e;
+	--primary-color: #e3008c;
+	--link-color: #e3008c;
+	--focus-color: #e3008c;
 	--text-color: #345;
+	--grey-text-color: #767676;
 
 	--bg-hatched: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAIAAAAmkwkpAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAhSURBVBhXY/gPBq+ffQCSIA6EBeLAWUDACMQMYPDm+UcAnFYo6+2nYfgAAAAASUVORK5CYII=)
 		repeat;
