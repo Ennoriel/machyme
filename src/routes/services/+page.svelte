@@ -1,3 +1,12 @@
+<script>
+	import { Seo } from "chyme-svelte";
+</script>
+
+<Seo
+	description="The service I offer as a 7 year senior front developer: build, extend, review"
+	title="Maxime Dupont - services"
+/>
+
 <h1>Services</h1>
 
 <!-- beaucoup de I et ça fait mal -->

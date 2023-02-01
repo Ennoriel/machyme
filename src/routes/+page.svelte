@@ -12,7 +12,7 @@
 
 <div style:margin-top="0">
 	<p>
-		<strong>Hi, I'm Maxime, a frontend engineer.</strong> I've been building website for 7 years. I have
+		<strong>Hi, I'm Maxime, a frontend developer.</strong> I've been building website for 7 years. I have
 		always placed great importance on SEO, accessibility and performance issues. This blog is a place where
 		I intend to share some tips and some longer insights on web development.
 	</p>
