@@ -68,7 +68,7 @@
 		top: 0;
 		bottom: 0;
 		z-index: -1;
-		background-color: #ff029e12;
+		background-color: var(--primary-color-200);
 		transform: translateX(-50%) skew(0, -2deg);
 		box-sizing: border-box;
 	}

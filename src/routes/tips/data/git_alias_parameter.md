@@ -1,7 +1,7 @@
 ---
 layout: tip
 component: _2
-title: 'set a git alias with a command option'
+title: 'Set a git alias with a command option'
 technologies:
   - git
 date: Sun Jan 29 2023 13:30:23 GMT+0100 (UTC)
