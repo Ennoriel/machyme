@@ -9,7 +9,7 @@ export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 	}));
 
 	const rss = getRss({
-		title: 'Machyme blog articles',
+		title: 'Maxime Dupont blog articles',
 		description: 'New blog articles',
 		link: 'https://www.machyme.fr/blog/',
 		rssLink: 'https://www.machyme.fr/rss.xml',

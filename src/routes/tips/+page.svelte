@@ -7,6 +7,11 @@
 	export let data: PageData;
 </script>
 
+<Seo
+	description="The latest dev tips by Maxime Dupont, about Svelte, Accessibility and DataViz."
+	title="Maxime Dupont - tips"
+/>
+
 <h1>Tips & tricks</h1>
 
 <blockquote>

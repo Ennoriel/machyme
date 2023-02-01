@@ -10,8 +10,8 @@
 </script>
 
 <Seo
-	description="The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz."
-	title="Machyme - dev blogs"
+	description="The latest dev blogs by Maxime Dupont, about Svelte, Accessibility and DataViz."
+	title="Maxime Dupont"
 />
 
 <h1>Blog articles about {keyword}</h1>

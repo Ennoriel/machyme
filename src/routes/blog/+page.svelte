@@ -7,8 +7,8 @@
 </script>
 
 <Seo
-	description="The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz."
-	title="Machyme - dev blog"
+	description="The latest dev blogs by Maxime Dupont, about Svelte, Accessibility and DataViz."
+	title="Maxime Dupont - blog"
 />
 
 <h1>Publications</h1>

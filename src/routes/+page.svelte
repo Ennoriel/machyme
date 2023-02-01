@@ -6,8 +6,8 @@
 </script>
 
 <Seo
-	description="The latest dev blogs written by Machyme, about Svelte, Accessibility and DataViz"
-	title= "Machyme - dev blog"
+	description="The latest dev blogs by Maxime Dupont, about Svelte, Accessibility and DataViz"
+	title= "Maxime Dupont"
 />
 
 <div style:margin-top="0">
