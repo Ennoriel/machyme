@@ -7,16 +7,16 @@
 
 <Seo
 	description="The latest dev blogs by Maxime Dupont, about Svelte, Accessibility and DataViz"
-	title= "Maxime Dupont"
+	title="Maxime Dupont"
 />
 
 <div style:margin-top="0">
 	<p>
-		<strong>Hi, I'm Maxime, a frontend developer.</strong> I've been building website for 7 years. I have
-		always placed great importance on SEO, accessibility and performance issues. This blog is a place where
-		I intend to share some tips and some longer insights on web development.
+		<strong>Hi, I'm Maxime, a frontend developer.</strong> I've been building website for 7 years. I
+		have always placed great importance on SEO, accessibility and performance issues. This blog is a
+		place where I intend to share some tips and some longer insights on web development.
 	</p>
-	
+
 	<p>
 		Feel free to <a href="mailto:m.dupont103@gmail.com">contact me</a> if you want me to prototype, extend
 		or review your project .
@@ -34,9 +34,9 @@
 
 	<p style:margin-bottom="0">
 		<strong>When building things, you are faced with tens and hundreds of problems a day.</strong>
-		Some are easy to solve, and you have already encountered some of them. Some are tricker, you
-		need to open more than one StackOverflow post. That is why I share some of the most common but
-		trickiest <a href="/tips">tips and tricks</a>.
+		Some are easy to solve, and you have already encountered some of them. Some are tricker, you need
+		to open more than one StackOverflow post. That is why I share some of the most common but trickiest
+		<a href="/tips">tips and tricks</a>.
 	</p>
 </div>
 

@@ -6,12 +6,7 @@
 	const { date, title, description } = $$restProps;
 </script>
 
-<Seo
-	{title}
-	{description}
-	date={new Date(date).toISOString().slice(0,10)}
-	type="article"
-/>
+<Seo {title} {description} date={new Date(date).toISOString().slice(0, 10)} type="article" />
 
 <article class="blog-article">
 	<h1>{title}</h1>

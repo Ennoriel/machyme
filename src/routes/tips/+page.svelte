@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Keywords from '$lib/components/blog/Keywords.svelte';
 	import { formatDate } from 'chyme';
+	import { Seo } from 'chyme-svelte';
 	import type { PageData } from './$types';
 	import * as m from './data';
 
@@ -21,7 +22,9 @@
 <ul>
 	{#each data.tips as tip, index}
 		<li>
-			<h2 id="{tip.title}"><em>Tip #{data.tips.length - index}</em> - <a href="/tips#{tip.title}">{tip.title}</a></h2>
+			<h2 id={tip.title}>
+				<em>Tip #{data.tips.length - index}</em> - <a href="/tips#{tip.title}">{tip.title}</a>
+			</h2>
 			<Keywords keywords={tip.technologies} />
 			<p style:color="#789" style:margin-top="8px">{formatDate(tip.date)}</p>
 			<svelte:component this={m[tip.component]} />
@@ -53,7 +56,7 @@
 
 	a {
 		color: var(--text-color);
-		transition: all .2s;
+		transition: all 0.2s;
 	}
 	a:hover {
 		color: var(--link-color);

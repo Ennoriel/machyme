@@ -58,7 +58,7 @@
 		padding: 4px;
 		margin-left: -4px;
 		color: var(--text-color);
-		transition: all .2s;
+		transition: all 0.2s;
 	}
 	a:hover {
 		color: var(--link-color);

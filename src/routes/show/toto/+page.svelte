@@ -106,7 +106,7 @@
 		top: 192px;
 	}
 
-	@media (min-width: 720px) {
+	@media (min-width: 768) {
 		.commands :global(.wrapper) {
 			left: 72px;
 		}

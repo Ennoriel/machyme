@@ -1,34 +1,16 @@
 <script>
 	import { page } from '$app/stores';
-
-	const routes = [
-		{
-			label: 'Blog',
-			path: '/blog'
-		},
-		{
-			label: 'Tips',
-			path: '/tips'
-		},
-		{
-			label: 'Services',
-			path: '/services'
-		}
-	];
+	import { routes } from './routes';
 </script>
 
 <nav aria-label="primary">
 	<a href="#content" class="skip-link"> Go to main content </a>
 	<span style:flex-grow="2">
-		<a
-			href="/"
-			aria-current={($page.url.pathname === '/' && 'page') || undefined}
-			style:font-size="18px"
-		>
+		<a class="name" href="/" aria-current={($page.url.pathname === '/' && 'page') || undefined}>
 			<span style:color="black">Maxime</span> Dupont
 		</a>
 	</span>
-	{#each routes as route}
+	{#each routes.filter((route) => route.top) as route}
 		{@const active = $page.url.pathname === route.path}
 		<a href={route.path} aria-current={(active && 'page') || undefined}>
 			{route.label}
@@ -49,19 +31,22 @@
 		color: var(--primary-color);
 	}
 
-	@media screen and (min-width: 768px) {
-		nav {
-			gap: 64px;
-		}
-	}
-
 	a {
-		padding: 4px 8px;
+		padding: 4px;
 		border-radius: 8px;
 		transition: color 0.2s;
 	}
 
-	@media (min-width: 768px) {
+	@media screen and (min-width: 768px) {
+		nav {
+			gap: 64px;
+		}
+		.name {
+			font-size: 18px;
+		}
+		a {
+			padding: 4px 8px;
+		}
 		a:hover {
 			color: var(--primary-color);
 		}
