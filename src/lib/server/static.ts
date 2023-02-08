@@ -13,7 +13,7 @@ async function convertMetadata<T>([path, page]: Glob<T>) {
 
 export async function getPosts() {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/routes/blog/**/*.md') as GlobReturn<BlogPost>).map(
+		Object.entries(import.meta.glob('/src/routes/\\(pink\\)/blog/**/*.md') as GlobReturn<BlogPost>).map(
 			async (arg) => convertMetadata(arg)
 		)
 	);
@@ -23,7 +23,7 @@ export async function getPosts() {
 
 export async function getTips() {
 	const tips = await Promise.all(
-		Object.entries(import.meta.glob('/src/routes/tips/data/**/*.md') as GlobReturn<Tip>).map(
+		Object.entries(import.meta.glob('/src/routes/\\(pink\\)/tips/data/**/*.md') as GlobReturn<Tip>).map(
 			async (arg) => convertMetadata(arg)
 		)
 	);
