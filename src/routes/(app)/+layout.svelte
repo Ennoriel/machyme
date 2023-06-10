@@ -20,3 +20,9 @@
 </main>
 
 <Footer />
+
+<style>
+	main {
+		line-height: 1.625;
+	}
+</style>

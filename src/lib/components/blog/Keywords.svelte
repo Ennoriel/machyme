@@ -23,8 +23,8 @@
 
 	li {
 		list-style: none;
-		background-color: #e8eff9;
-		color: #516a81;
+		background-color: var(--primary-color-50);
+		color: var(--primary-color-900);
 		padding: 0 8px 2px;
 		border-radius: 4px;
 	}

@@ -34,7 +34,7 @@
 <style>
 	footer {
 		padding: 64px 0 48px;
-		background-color: var(--primary-color-200);
+		background-color: var(--primary-color-50);
 
 		display: flex;
 		justify-content: center;
