@@ -10,7 +10,7 @@
 
 <article class="blog-article">
 	<h1>{title}</h1>
-	<p>published {formatDate(date)}</p>
+	<p>published {formatDate(date, 'fr-FR')}</p>
 
 	<slot />
 </article>

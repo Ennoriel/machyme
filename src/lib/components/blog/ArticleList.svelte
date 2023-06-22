@@ -19,7 +19,7 @@
 				<a href={`/blog/${post.slug}`}>{post.title}</a>
 			</h2>
 			<p style:color="var(--grey-text-color)">
-				{formatDate(post.date)}
+				{formatDate(post.date, 'fr-FR')}
 			</p>
 			<p>
 				{post.description}
