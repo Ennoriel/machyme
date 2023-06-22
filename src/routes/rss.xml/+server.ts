@@ -20,7 +20,7 @@ export const GET: import('@sveltejs/kit').RequestHandler = async () => {
 	return new Response(rss, {
 		headers: {
 			'Cache-Control': `max-age=0, s-max-age=${ttlInMin * 60}`,
-			'Content-Type': 'application/rss+xml'
+			'Content-Type': 'text/xml'
 		}
 	});
 };
