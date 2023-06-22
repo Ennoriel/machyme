@@ -13,9 +13,9 @@ async function convertMetadata<T>([path, page]: Glob<T>) {
 
 export async function getPosts() {
 	const posts = await Promise.all(
-		Object.entries(import.meta.glob('/src/routes/\\(pink\\)/blog/**/*.md') as GlobReturn<BlogPost>).map(
-			async (arg) => convertMetadata(arg)
-		)
+		Object.entries(
+			import.meta.glob('/src/routes/\\(app\\)/blog/**/*.md') as GlobReturn<BlogPost>
+		).map(async (arg) => convertMetadata(arg))
 	);
 	posts.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 	return posts;
@@ -23,9 +23,9 @@ export async function getPosts() {
 
 export async function getTips() {
 	const tips = await Promise.all(
-		Object.entries(import.meta.glob('/src/routes/\\(pink\\)/tips/data/**/*.md') as GlobReturn<Tip>).map(
-			async (arg) => convertMetadata(arg)
-		)
+		Object.entries(
+			import.meta.glob('/src/routes/\\(app\\)/tips/data/**/*.md') as GlobReturn<Tip>
+		).map(async (arg) => convertMetadata(arg))
 	);
 	tips.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));
 	return tips;

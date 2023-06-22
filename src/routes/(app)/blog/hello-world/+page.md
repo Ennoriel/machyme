@@ -2,15 +2,15 @@
 layout: blog
 date: Fri Apr 22 2022 06:17:15 GMT+0200 (UTC)
 slug: hello-world
-title: 'My first ever article! (easter-egg guaranteed) 🌴'
-description: When building anything, the first thing you should do is to try deploying it, while there is few to no content. Why? because if it's not working, it'll be easier to debug. That is what this article is for ;)
+title: 'Mon tout premier article! (suprise incluse !) 🌴'
+description: Lorsque vous construisez quelque chose, la première chose à faire est d'essayer de le déployer, alors qu'il y a peu ou pas de contenu. Pourquoi ? parce que si ça ne marche pas, ce sera plus facile à déboguer. C'est la raison d'être de cet article ;)
 keywords:
   - svelte
 ---
 
-It works!
+Ça marche !
 
-While doing this article, I wanted to add an easter egg in the form of a HTML comment. But I couldn't find a way to do it in Svelte. I tried to use the `<!--` and `-->` tags, but they didn't work. I then tried a more sophisticated method, but it didn't work either:
+Lors de l'écriture de cet article, j'ai voulu ajouter une surprise sous la forme d'un commentaire HTML. Mais je n'ai pas trouvé le moyen de le faire avec Svelte. J'ai essayé d'utiliser les balises `<!--` et `-->`, mais cela n'a pas fonctionné. J'ai ensuite essayé une méthode plus sophistiquée, mais elle n'a pas fonctionné non plus :
 
 ```html
 <script>
@@ -20,14 +20,14 @@ While doing this article, I wanted to add an easter egg in the form of a HTML co
 {test}
 ```
 
-This does not work because Svelte does not interpret the HTML unless you ask it to (thankfully!). To do so, you only have to use the `@html` directive:
+Cela ne fonctionne pas car Svelte n'interprète pas le HTML à moins que vous ne le lui demandiez (heureusement !). Pour cela, il suffit d'utiliser la directive `@html` :
 
 ```html
 {@html "<!-- Hello World! -->"}
 ```
 
-And voilà!
+Et voilà !
 
-So, is there an easter egg in this page?
+Alors, y a-t-il une surprise dans cette page ?
 
-{@html "<!-- I'd like to work with you! Contact me on Github or LinkedIn! (links in the footer) -->"}
+{@html "<!-- J'aimerais travailler avec vous ! Contactez-moi sur Github ou LinkedIn ! (liens en bas de page) -->"}

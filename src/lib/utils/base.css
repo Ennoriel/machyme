@@ -18,8 +18,8 @@ body {
 	--primary-color-900: #2239b8;
 
 	--primary-color: var(--primary-color-800);
-	--link-color: var(--primary-color-800);
-	--focus-color: var(--primary-color-900);
+	--link-color: var(--primary-color-700);
+	--focus-color: var(--primary-color-700);
 	--text-color: #345;
 	--grey-text-color: #767676;
 

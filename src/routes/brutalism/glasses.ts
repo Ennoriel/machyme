@@ -1,5 +1,4 @@
-export default
-`                  xxxxxxxxxxxxxxx                                                                                                                                                       
+export default `                  xxxxxxxxxxxxxxx                                                                                                                                                       
      xxxxxxxxxxxxx               xxxxxxxxxxxxx                                   xxxxxxxxxxxxxxxxx                                                                                      
  xxxx              xxxxxxxxxxxxxx             xxxxxxxx             xxxxxxxxxxxxxx                 xxxxxxxxxxxxxxxxx                                                                     
 xx         xxxxxxxx              xxxxxxxxxxx          xxxxxxxxxxxxx                xxxxxx                          xxxxxxxxxxx                                                          

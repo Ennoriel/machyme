@@ -7,7 +7,7 @@
 </script>
 
 <Seo
-	description="The latest dev blogs by Maxime Dupont, about Svelte, Accessibility and DataViz."
+	description="Les derniers articles du blog par Maxime Dupont, à propos de Svelte, d'accessibility et de data-viz."
 	title="Maxime Dupont - blog"
 />
 

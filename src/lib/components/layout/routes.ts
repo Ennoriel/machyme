@@ -12,7 +12,7 @@ export const routes = [
 		top: true
 	},
 	{
-		label: 'Projects',
+		label: 'Projets',
 		path: '/projects',
 		bottom: true
 	},

@@ -3,20 +3,23 @@
 	import { formatDate } from 'chyme';
 	import { Seo } from 'chyme-svelte';
 	import type { PageData } from './$types';
-	import * as m from './data';
+	import * as tipsContent from './data';
+
+	const tipsContentAny = tipsContent as any;
 
 	export let data: PageData;
 </script>
 
 <Seo
-	description="The latest dev tips by Maxime Dupont, about Svelte, Accessibility and DataViz."
+	description="Les derniers conseils de Maxime Dupont sur Svelte, l'accessibilité et la DataViz."
 	title="Maxime Dupont - tips"
 />
 
 <h1>Tips & tricks</h1>
 
 <blockquote>
-	In this page I'll share some tips and tricks that I have found while figuring out how things work.
+	Sur cette page, je partagerai quelques conseils et astuces que j'ai trouvés en essayant de
+	comprendre comment les choses fonctionnent.
 </blockquote>
 
 <ul>
@@ -25,9 +28,11 @@
 			<h2 id={tip.title}>
 				<em>Tip #{data.tips.length - index}</em> - <a href="/tips#{tip.title}">{tip.title}</a>
 			</h2>
-			<Keywords keywords={tip.technologies} />
-			<p style:color="#789" style:margin-top="8px">{formatDate(tip.date)}</p>
-			<svelte:component this={m[tip.component]} />
+			<div>
+				<Keywords keywords={tip.technologies} />
+			</div>
+			<p style:color="#789" style:margin-top="8px">{formatDate(tip.date, 'fr-FR')}</p>
+			<svelte:component this={tipsContentAny[tip.component]} />
 		</li>
 	{/each}
 </ul>
@@ -70,6 +75,11 @@
 		margin: 0 -4px 0 -8px;
 		padding: 2px 12px;
 		border-radius: 16px 8px / 8px 16px;
-		background: linear-gradient(to right, #ff029e12, #ff029e24 20%, #ff029e12);
+		background: linear-gradient(
+			to right,
+			var(--primary-color-50),
+			var(--primary-color-100) 15%,
+			var(--primary-color-50)
+		);
 	}
 </style>

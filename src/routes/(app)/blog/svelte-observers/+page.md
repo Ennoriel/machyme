@@ -2,50 +2,44 @@
 layout: blog
 date: Sat Apr 30 2022 11:58:32 GMT+0200 (UTC)
 slug: svelte-observers
-title: 'vh observer & dpr observer 🔍'
-description: The easiest way to implement a vh observer and a dpr observer in svelte. These components are useful in almost any svelte project.
+title: "Réglez les problèmes d'affichage avec les observeurs customisés (vh et dpr) 🔍"
+description: "La façon la plus simple d'implémenter un observateur vh et un observateur dpr dans Svelte. Ces composants sont utiles dans presque tous les projets svelte."
 keywords:
   - svelte
   - observers
-  - vh
-  - dpr
 ---
 
 <script>
     import Gist from '$lib/components/blog/Gist.svelte';
 </script>
 
-## vh observer
+## observeur vh
 
-The css unit `vh` does not work very well on all mobile browsers. This is because they include from time to time a native header with the notification icons and a native footer with navigation buttons. The footer is not always present and when it is, it is not always taken into account for the css `vh` value. This may lead to content hidden behind the footer.
+L'unité css `vh` ne fonctionne pas très bien sur tous les navigateurs mobiles. Cela est dû au fait qu'ils incluent de temps en temps un la barre de navigation supérieure ou inférieure. Celle inférieure n'est pas toujours présente et lorsqu'elle l'est, ellle n'est pas toujours prise en compte dans la valeur css `vh`. Cela peut conduire à un contenu caché en dessous.
 
-There is a very good article and native javascript implementation on [css-tricks](https://css-tricks.com/the-trick-to-viewport-units-on-mobile/) that I recommend to use. The corresponding implementation in svelte is below.
+Il y a un très bon article et une implémentation native en javascript sur [css-tricks] (https://css-tricks.com/the-trick-to-viewport-units-on-mobile/) que je recommande d'utiliser. L'implémentation correspondante dans svelte est ci-dessous.
 
 <Gist uri="Ennoriel/8c89dc3615292f0a40b04f4f876afd77"/>
 
-With that implementation, you can use the `var(--vh)` value in your css anywhere in your application.
+Avec cette implémentation, vous pouvez utiliser la valeur `var(--vh)` dans votre css n'importe où dans votre application.
 
-## dpr observer
+## observeur dpr
 
-> The device pixel ratio `window.devicePixelRatio` is the ratio of the resolution in physical pixels to the resolution in CSS pixels for the current display device. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
+> Le rapport de pixels du périphérique `window.devicePixelRatio` est le rapport entre la résolution en pixels physiques et la résolution en pixels CSS pour un périphérique d'affichage donné. [MDN](https://developer.mozilla.org/en-US/docs/Web/API/Window/devicePixelRatio)
 
-Most developers would consider two different kind of users visiting their website: those who have a high resolution screen (`dpr > 1.5`) and the others (`dpr = 1`). To solve that, every one would be served an image twice the size of the physical space.
+Le dpr est un calcul de deux facteurs :
 
-That assumption was not true yesterday. That is even less true today with higher resolution screens.
+- le ratio défini au niveau du système d'exploitation (sur mon ordinateur portable, il est de 1,5, ce qui signifie que 3 pixels physiques sont affichés sous la forme de 2 pixels CSS).
+- le rapport défini au niveau du navigateur (sur mon ordinateur portable, il est de `80%`, ce qui signifie que 8 pixels au niveau du système d'exploitation sont affichés sous la forme de 10 pixels CSS).
 
-The dpr is a computation of two factors:
+Les navigateurs ne calculent pas le dpr de la même manière. Sur Firefox, il y a une approximation faite par le navigateur. Avec ma configuration, j'obtiens un dpr de 1,2 (`1,5 x 0,8`). Il n'est pas nécessaire de connaître ces valeurs pour utiliser le rapport de pixel de l'appareil.
 
-- the ratio set at the OS level (on my laptop, it is `1.5` which means that 3 physical pixels are shown as 2 CSS pixels).
-- the ratio set at the browser level (on my laptop, `80%` which means that 8 OS level pixels are shown as 10 CSS pixels).
+Le dpr est vraiment utile lorsque vous avez besoin de tracer des lignes de même largeur (le `1px` qui est parfois affiché comme 1 pixel physique, parfois comme 2 pixels physiques sur le même écran).
 
-Browsers do not compute the dpr the same way. On Firefox, there is an approximation made by the browser. With my configuration, I get a dpr of 1.2 (`1.5 x 0.8`). You do not need to know these values to use the device pixel ratio.
+Vous pouvez utiliser la valeur `dpr` dans le css : `border : {1/dpr}px solid black`.
 
-The dpr is really useful when you need to draw lines with the same width (the `1px` that sometimes is shown as 1 physical pixel, sometimes as 2 physical pixels on the same screen).
+La valeur dpr peut changer au cours de la vie d'une page. Par exemple, si un utilisateur estime que le texte de votre site est trop petit, il peut l'agrandir. Pour en tenir compte, il faudrait recalculer la valeur dpr à l'aide d'un observeur !
 
-You can use the `dpr` value in the css: `border: {1/dpr}px solid black`. You might be warned by your IDE that the value is not correct since a length in pixel should not be decimal. But that is only correct in terms of physical pixels.
-
-The dpr value can change through the lifetime of any page. For example, if a user feels that the text on your site is too small, he might zoom in. To take that into account, you'd have to recompute the dpr value with an observer!
-
-Here is the Svelte implementation:
+Voici l'implémentation avec Svelte :
 
 <Gist uri="Ennoriel/02efec514c6107e48a88f0f84486a7ac"/>

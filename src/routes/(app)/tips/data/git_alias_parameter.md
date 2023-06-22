@@ -1,23 +1,45 @@
 ---
 layout: tip
 component: _2
-title: 'Set a git alias with a command option'
+title: 'Définir un alias git avec un paramètre'
 technologies:
   - git
 date: Sun Jan 29 2023 13:30:23 GMT+0100 (UTC)
 ---
 
-You have to define a function within the alias itself. It's fairly easy to do (do notice the _single_ quotes):
+Si l'argument vient en argument final de la commande git, vous pouvez définir l'alias comme suit :
 
 ```shell
-git config --global alias.<alias_name> '!f() { <command_with_$1_for_first_parameter> }; f'
+git config --global alias.<nom d\'alias> '<command>'
+
+# exemple
+git config --global alias.cm 'commit -m'
+
+# utilisation
+git cm "message de commit"
 ```
 
-For example, to create an alias which deletes an alias:
+Sinon, deux solutions s'offrent à vous. La première permet de définir l'alias en ligne de commande (attention aux deux ";") :
 
 ```shell
+git config --global alias.<nom d\'alias> '!f() { <commande avec $1 pour le premier paramètres>; }; f'
+
+# exemple
 git config --global alias.aliasd '!f() { git config --global --unset alias.$1; }; f'
 
-# use
-git aliasd <alias_name>
+# utilisation
+git aliasd <nom d\'alias>
+```
+
+La seconde est plus concise mais devra directement être ajouté dans votre fichier `.gitconfig` :
+
+```shell
+[alias]
+	<nom d'alias> = "!<commande avec $1 pour le premier paramètres>"
+
+# exemple
+  aliasd '!git config --global --unset alias.$1'
+
+# utilisation
+git aliasd <nom d'alias>
 ```

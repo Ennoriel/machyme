@@ -7,10 +7,10 @@
 	<div class="wrapper">
 		<span>
 			<p>Maxime Dupont</p>
-			<p><a href="/legals">Legals</a></p>
+			<p><a href="/legals">Mentions légales</a></p>
 		</span>
 		<span>
-			<p><a href="mailto:m.dupont103@gmail.com">🐟 Mail</a></p>
+			<p><a href="mailto:m.dupont103@gmail.com">🐟 Email</a></p>
 			<p>
 				<a href="https://www.linkedin.com/in/maxime-dupont-dev/" target="_blank" rel="noreferrer"
 					>🤙 LinkedIn</a
@@ -47,16 +47,6 @@
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr;
 		align-items: center;
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-	li {
-		display: inline;
-		list-style: none;
-		margin: 0 0.5rem;
-		padding: 0 0.5rem;
 	}
 	p {
 		text-align: center;

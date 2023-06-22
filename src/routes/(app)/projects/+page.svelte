@@ -1,23 +1,25 @@
 <script>
+	import { Seo } from 'chyme-svelte';
+
 	const projects = [
 		{
 			title: 'Trouve Ton Sport',
 			url: 'https://www.trouvetonsport.com/',
 			description:
-				'Search engine for sport slots near your home. Filters by sport, age, sex, day, type of practice... With geolocation of nearby sports facilities.',
+				'Moteur de recherche de créneaux sportifs près de chez vous. Filtres par sport, âge, sexe, jour, type de pratique... Avec géolocalisation des équipements sportifs à proximité.',
 			image: {
 				src: '/projects/trouve-ton-sport.webp',
-				alt: "mobile mockups of 'Trouve Ton Sport'. Featuring the search results, the map and the filter panel."
+				alt: "maquettes mobiles de 'Trouve Ton Sport'. Avec les résultats de la recherche, la carte et le panneau de filtrage."
 			}
 		},
 		{
 			title: 'SlowLettuce',
 			url: 'https://slowlettuce.io/',
 			description:
-				'SlowLettuce is a small task force of digital natives that obsess over design. They covers both business strategy, UX UI design, and all your other product design essentials for the needs of early-stage tech startups.',
+				"SlowLettuce est une petite équipe de passionnée par le design. Ils couvrent à la fois la stratégie d'entreprise, le design UX UI, et tous les autres éléments essentiels de la conception de produits pour les besoins des startups technologiques en phase de démarrage.",
 			image: {
 				src: '/projects/slowlettuce.webp',
-				alt: "homepage of the SlowLettuce website. Featuring 'Berlin's product design agency'.",
+				alt: "Page d'accueil du site web SlowLettuce. Présentation de l'agence berlinoise de conception de produits.",
 				class: 'shadow'
 			}
 		},
@@ -25,17 +27,22 @@
 			title: 'Bead weaving pattern editor',
 			url: 'https://www.trouvetonsport.com/',
 			description:
-				'Web app to create bead weaving bracelets and pins. Made specifically for Miyuki beads. More than 2000 Miyuki beads available for the patterns.',
+				'Application web pour créer des motifs de bracelets et de broches en perles. Conçue spécifiquement pour les perles Miyuki. Plus de 2000 perles Miyuki disponibles pour les modèles.',
 			image: {
 				src: '/projects/bead-weaving.webp',
-				alt: 'Bead weaving pattern editor. Featuring the Togepi pokemon',
+				alt: 'Éditeur de modèles de tissage de perles. Avec le pokémon Togepi',
 				class: 'shadow'
 			}
 		}
 	];
 </script>
 
-<h1>Past projects</h1>
+<Seo
+	description="Trouve Ton Sport, SlowLettuce... présentation des 	projets sur lesquels j'ai travaillé"
+	title="Maxime Dupont - projets"
+/>
+
+<h1>Projets précédents</h1>
 
 <section>
 	{#each projects as project}
@@ -45,7 +52,11 @@
 	{/each}
 </section>
 
-<p>Want to see how we could work together? <a href="/services">See my services</a>.</p>
+<p>
+	Vous souhaitez savoir nous pourrions travailler ensemble ? <a href="/services"
+		>Voir ce que je propose</a
+	>.
+</p>
 
 <style>
 	img {

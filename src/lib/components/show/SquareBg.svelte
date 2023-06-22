@@ -2,7 +2,7 @@
 	import { browser } from '$app/environment';
 	import Canvas from './Canvas.svelte';
 	import Square from './Square.svelte';
-	import type { SquareConfig } from '../../../routes/show/floating-squares/_squares';
+	import type { SquareConfig } from '../../../routes/(app)/show/floating-squares/_squares';
 	import { SCREEN_SIZE } from '$lib/types/utils.type';
 
 	export let squares: Array<SquareConfig>;

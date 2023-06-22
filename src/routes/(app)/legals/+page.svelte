@@ -1,22 +1,22 @@
-<h1>Legals</h1>
+<h1>Mentions Légales</h1>
 
-<h2>Identity</h2>
+<h2>Identité</h2>
 
 <p>
-	Maxime Dupont EI is an individual company registered at URSSAF in France.<br />
+	Maxime Dupont EI est une entreprise individieulle enregistré à l'URSSAF en France.<br />
 	SIRET : 893 559 997 00026
 </p>
 
 <p>
 	m.dupont103@gmail.com<br />
-	61 rue Jouvenet<br />
-	76000 Rouen<br />
+	106 Boulevard de Sévigné<br />
+	35700 Rennes<br />
 	France
 </p>
 
-<p>Website Editor: Maxime Dupont</p>
+<p>Éditeur du site: Maxime Dupont</p>
 
-<h2>Hosting</h2>
+<h2>Hébergement</h2>
 
 <p>
 	Vercel Inc.<br />
@@ -27,7 +27,8 @@
 </p>
 
 <p>
-	machyme.fr do not use cookies. Some services used (Vercel Inc.) may collect some data: <a
-		href="https://vercel.com/legal/privacy-policy">https://vercel.com/legal/privacy-policy</a
+	Le site machyme.fr n'utilise pas de cookies. Le service d'hébergement (Vercel Inc.) peut
+	éventuellement collecter des données: <a href="https://vercel.com/legal/privacy-policy"
+		>https://vercel.com/legal/privacy-policy</a
 	>.
 </p>

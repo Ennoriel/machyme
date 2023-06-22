@@ -1,64 +1,72 @@
 <script>
 	import { Seo } from 'chyme-svelte';
+
+	const SKILLS = [
+		['🦧', 'Performance', 'optimisation SEO'],
+		['🐢', 'Optimisation', 'optimisation des images, polices, etc.'],
+		['🦢', 'Design System', 'Librairie de composants réutilisable'],
+		['🐬', 'Bonnes pratiques', 'Conventions de nommage, cycle de mise en production court'],
+		['🐳', 'Accessibilité', 'WAI']
+	];
 </script>
 
 <Seo
-	description="The service I offer as a 7 year senior front developer: build, extend, review"
+	description="Les services que j'offre en tant que développeur front senior depuis 7 ans : développer, améliorer, revue de projet"
 	title="Maxime Dupont - services"
 />
 
 <h1>Services</h1>
 
-<!-- beaucoup de I et ça fait mal -->
-<!-- <strong>
-    If you are working on climate change, I would love to work with you! 💖
-</strong> -->
-
 <p>
-	I help both companies and startups focus on their area of expertise by building fast user-oriented
-	websites that can leverage their product or service. I also extend or review existing websites to
-	improve user experience or performance and save time and stress on the long run.
+	J'aide les entreprises et les startups à se concentrer sur leur domaine d'expertise en
+	construisant des sites web rapides et orientés vers l'utilisateur qui peuvent mettre en valeur
+	leur produit ou service. Je développe ou fait également des revues des sites web existants pour
+	améliorer l'expérience utilisateur ou la performance et économiser du temps et du stress sur le
+	long terme.
 </p>
 <blockquote>
-	I follow the best practices of the time, not just about naming conventions and clear patterns but
-	also accessibility, Internationalization, SEO, etc.
+	Je suis les meilleures pratiques du moment, non seulement en ce qui concerne les conventions de
+	nommage et les modèles clairs, mais aussi l'accessibilité, l'internationalisation, le
+	référencement SEO, etc.
 </blockquote>
 <p>
-	I am passionate about performance and code quality at scale! I have a strong experience in
-	building maintainable web applications using component frameworks, TypeScript and other
-	web-platform features around progressive enhancements.
-	<a href="/projects">See my past experiences</a>.
+	Je suis passionné par la performance et la qualité du code ! J'ai une solide expérience dans le
+	développement d'applications web maintenables en utilisant des frameworks de composants,
+	TypeScript ainsi que les bonnes pratiques.
+	<a href="/projects">Voir mes expériences passées</a>.
 </p>
 <p>
-	I love making shared maintainable, tested and documented code. I write guides, docs, and
-	frameworks so the wheels keep turning when you're not online. Please let me the opportunity to
-	make your product or service a success!
+	J'aime faire du code maintenable, testé et documenté. Je peux rédiger des guides et des documents
+	pour que l'application continue de tourner quoi qu'il arrive. Laissez-moi l'opportunité de de
+	faire de votre produit ou service un succès !
 </p>
 
-<h2>You are a startup?</h2>
+<h2>Vous êtes une startup ?</h2>
 <p>
-	I can help you make the prototype of a mockup in to time while still making the good choices for
-	your future architecture because you don't want to start over at each iteration.
+	Je peux vous aider à réaliser le prototype d'une maquette en un temps record tout en faisant les
+	bons choix pour votre future architecture. votre future architecture car vous ne voulez pas
+	recommencer à chaque itération.
 </p>
 <p>
-	You'll be able to figure out your growth hypothesis and make your product or service a success.
-</p>
-
-<h2>You are a company?</h2>
-<p>
-	I can help build or extend your project (SEO, design system, reusable components, etc.). I will
-	get straight to the point to fulfill your objectives while suggesting improvements where there is
-	room for.
-</p>
-<p>
-	I'll review your project structure or team organization and give you advice based on working past
-	experiences.
+	Vous serez en mesure de valider vos hypothèses de croissance et de faire de votre produit ou
+	service un succès.
 </p>
 
-<h2>Skills</h2>
+<h2>Vous êtes une entreprise ?</h2>
+<p>
+	Je peux vous aider à développer ou à étendre votre projet (SEO, conception, composants
+	réutilisables, etc.). Je vais droit au but pour atteindre vos objectifs tout en suggérant des
+	améliorations là où c'est possible.
+</p>
+<p>
+	J'audit votre projet ou l'organisation de votre équipe et vous donnerai des conseils fondés sur
+	mes expériences passées.
+</p>
+
+<h2>Compétences</h2>
 
 <ul>
-	{#each [['🦏', 'Scalable code'], ['🐬', 'Best practices', 'naming conventions, git hooks, git flow, SSR'], ['🐢', 'Ecodesign practices', 'image optimization, standards'], ['🦢', 'Design System', 'reusable UI library, Storybook'], ['🦜', 'Full typings', 'typescript, JsDoc'], ['🐧', 'Svelte, React', 'hooks, patterns, performance'], ['🐦', 'Tests', 'playwright, cypress, jest'], ['🐉', 'Internationalization', 'i18n'], ['🦧', 'Analytics and SEO'], ['🐳', 'Accessibility', 'WAI'], ['🦖', 'Bundler & Automatization', 'Webpack, Vite, Actions ']] as [animal, skill, tools]}
+	{#each SKILLS as [animal, skill, tools]}
 		<li style:line-height="1.8">
 			<span style:font-size="17px" style:margin-right="8px">{animal}</span>
 			<strong>{skill}</strong>
@@ -69,11 +77,14 @@
 	{/each}
 </ul>
 
-<h2>Final word</h2>
+<h2>Le mot de la fin</h2>
 
-<p>If you made it this far, you know what it means, we are probably meant to work together!</p>
+<p>
+	Si vous êtes arrivé jusqu'ici, vous savez ce que cela signifie : nous sommes probablement destinés
+	à travailler ensemble !
+</p>
 
-<a href="mailto:m.dupont103@gmail.com">Send me an email!</a>
+<a href="mailto:m.dupont103@gmail.com">Envoyez-moi un email!</a>
 
 <br />
 <br />

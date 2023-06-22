@@ -4,6 +4,10 @@
 
 <nav>
 	<h1>Showroom</h1>
+	<blockquote>
+		Il n'y a pas beaucoup d'explication dans cette partie du site qui se trouve d'ailleurs être en
+		anglais ! C'est le lieu ou j'experiment de nouvelles choses :)
+	</blockquote>
 	<ul>
 		{#each ROUTES as { href, label, description = "" }}
 			<li>

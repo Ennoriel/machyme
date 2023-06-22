@@ -2,40 +2,39 @@
 layout: blog
 date: Sun Jul 10 2022 17:12:22 GMT+0200 (UTC)
 slug: svelte-inkjs
-title: 'Write interactive stories with InkJs & SvelteKit 🎢'
-description: 'How to integrate InkJs in a new skeleton SvelteKit project: a fast and easy way to start an interactive narrative based story website.'
+title: 'Écrire des histoires interactives avec InkJs et SvelteKit 🎢'
+description: 'Créez une histoire interactive ou le visiteur et le héros de son parcours, avec InkJs et SvelteKit.'
 keywords:
   - svelte
   - inkjs
-  - 'universal module definition'
 ---
 
-## What is InkJs?
+## Qu'est-ce que InkJs ?
 
-InkJs is the javascript port of the [Ink](https://github.com/y-lohse/inkjs) library. [Ink](https://github.com/inkle/ink) is a scripting language for writing interactive narrative, both for text-centric games as well as more graphical games that contain highly branching stories. It's designed to be easy to learn, but with powerful enough features to allow an advanced level of structuring.
+[InkJs](https://github.com/y-lohse/inkjs) est le portage javascript de la bibliothèque Ink. [Ink](https://github.com/inkle/ink) est un langage de script pour écrire des récits interactifs, aussi bien pour les jeux centrés sur le texte que pour les jeux plus graphiques qui contiennent des histoires très ramifiées. Il est conçu pour être facile à apprendre, mais avec des fonctionnalités suffisamment puissantes pour permettre un niveau avancé de structuration.
 
 ## Setup
 
-### Start a fresh SvelteKit project
+### Démarrer un nouveau projet SvelteKit
 
 ```shell
 mkdir my-app
 npm init svelte .
-# choose your project options (Skeleton, Typescript, ESLint, Prettier, Playwright, etc.)
+# choisissez votre option de projet (Skeleton, Typescript, ESLint, Prettier, Playwright, etc.)
 npm i
 ```
 
-### Integrate InkJs
+### Intégrer InkJs
 
-From the app.html file, we can download a UMD version of InkJs. You can either use a CDN or download a version from the npmjs registry. While the first one is easier, you'll have more difficulties to keep all your dependencies up to date since you'll have them defined at different places. I went with the second option:
+A partir du fichier app.html, nous pouvons télécharger une version UMD d'InkJs. Vous pouvez utiliser un CDN ou télécharger une version depuis le registre npmjs. Bien que la première option soit plus facile, vous aurez plus de difficultés à garder toutes vos dépendances à jour puisque vous les aurez définies à différents endroits. J'ai choisi la deuxième option :
 
-1. Download the InkJs library from the npmjs registry.
+1. Téléchargez la bibliothèque InkJs depuis le registre npmjs.
 
 ```shell
 npm i -D inkjs
 ```
 
-2. Modify the npm prepare script to copy the InkJs library to the static folder. With this script set, when someone installs the dependencies of your project with `npm i`, the InkJs library will be copied to the static folder. Additionally, you can add it to the `.gitignore` file if you don't want to track it in the repository.
+2. Modifiez le script npm prepare pour copier la librairie InkJs dans le dossier `static`. Avec ce script, lorsque quelqu'un installe les dépendances de votre projet avec `npm i`, la bibliothèque InkJs sera copiée dans le dossier `static`. De plus, vous pouvez l'ajouter au fichier `.gitignore` si vous ne voulez pas qu'il soit commité dans votre repo git.
 
 ```json
 {
@@ -45,14 +44,14 @@ npm i -D inkjs
 }
 ```
 
-3. Load the InkJs library in the `app.html` file.
+3. Chargez la bibliothèque InkJs dans le fichier `app.html`.
 
 ```html
-<!-- add this line in the head tag -->
+<!-- ajouter cette ligne dans la balise head -->
 <script src="%sveltekit.assets%/ink.js"></script>
 ```
 
-4. Create a story file. For the purpose of this article, I chose to export a `.ts` file as it is easier to integrate but fill free to use a json file or an endpoint. You can find an example story [here](https://github.com/y-lohse/inkjs/blob/master/templates/browser_serverless/story.js).
+4. Créez un fichier d'histoire. Pour les besoins de cet article, j'ai choisi d'exporter un fichier `.ts` car il est plus facile à intégrer, mais vous pouvez utiliser un fichier json ou un endpoint. Vous pouvez trouver un exemple d'histoire [ici] (https://github.com/y-lohse/inkjs/blob/master/templates/browser_serverless/story.js).
 
 ```typescript
 // lib/story.ts
@@ -61,7 +60,7 @@ const story = { ... };
 export default JSON.stringify(story);
 ```
 
-5. Import and use the story in the `index.svelte` route file:
+5. Importez et utilisez l'histoire dans le fichier de route `index.svelte` :
 
 ```svelte
 <script>
@@ -72,14 +71,14 @@ export default JSON.stringify(story);
 	let storyContainer;
 
 	onMount(() => {
-		// The story could be loaded from an endpoint or somewhere else
+		// L'histoire peut être chargée à partir d'un point final ou d'un autre endroit.
 		story = new window.inkjs.Story(storyJson);
 	});
 
 	$: if (story && storyContainer) continueStory();
 
 	/**
-	 * The code below is copy-pasted from the Ink.js examples
+	 * Le code ci-dessous est copié-collé à partir des exemples Ink.js
 	 * https://github.com/y-lohse/inkjs/blob/master/templates/browser_with_server/main.js
 	 */
 	function showAfter(delay, el) {
@@ -96,4 +95,4 @@ export default JSON.stringify(story);
 <div bind:this={storyContainer} />
 ```
 
-And voilà! You can now start writing your story.
+Et voilà ! Vous pouvez maintenant commencer à écrire votre histoire.

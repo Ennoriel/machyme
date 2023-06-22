@@ -2,50 +2,50 @@
 layout: blog
 date: Fri Apr 27 2022 06:17:15 GMT+0200 (UTC)
 slug: use-mdsvex
-title: How to build this blog 🔨
-description: Build your blog (like this one) in no time and with outstanding performance with SvelteKit and Mdsvex
+title: Comment construire ce blog 🔨
+description: Construisez votre blog (comme celui-ci) en un rien de temps et avec des performances exceptionnelles grâce à SvelteKit et Mdsvex
 keywords:
   - svelte-kit
   - svelte
   - mdsvex
 ---
 
-Are you a code learner? Here is the [Github repo of this blog](https://github.com/Ennoriel/machyme).
+Vous apprenez le code ? Voici le [repo Github de ce blog] (https://github.com/Ennoriel/machyme).
 
-In the article, we'll see how to configure a [SvelteKit](https://kit.svelte.dev/) markdown based blog with the help of the [mdsvex](https://mdsvex.com/) library. The blog we are going to build is:
+Dans cet article, nous verrons comment configurer un blog [SvelteKit](https://kit.svelte.dev/) basé sur le markdown avec l'aide de la bibliothèque [mdsvex](https://mdsvex.com/). Le blog que nous allons construire est :
 
-- mobile first
-- fast & accessible
-- can be hosted in most of the popular hosting services
-- build with SEO in mind
-- and is easy to maintain. 😮‍💨
+- compatible mobile
+- rapide et accessible
+- peut être hébergé dans la plupart des services d'hébergement populaires
+- construit en tenant compte de l'optimisation pour les moteurs de recherche
+- et est facile à entretenir. 😮‍💨
 
 ## Init SvelteKit project
 
-> [SvelteKit](https://kit.svelte.dev/) is a framework for building web applications of all sizes, with a beautiful development experience and flexible filesystem-based routing. Unlike single-page apps, SvelteKit doesn't compromise on SEO, progressive enhancement or the initial load experience — but unlike traditional server-rendered apps, navigation is instantaneous for that app-like feel.
+> [SvelteKit] (https://kit.svelte.dev/) est un framework pour construire des applications web de toutes tailles, avec une belle expérience de développement et un routage flexible basé sur le système de fichiers. Contrairement aux applications à page unique, SvelteKit ne fait aucun compromis sur le référencement, l'amélioration progressive ou l'expérience de chargement initial - mais contrairement aux applications traditionnelles avec rendu serveur, la navigation est instantanée pour donner l'impression d'être dans une application.
 
-You can initialize a SvelteKit project with the following command:
+Vous pouvez initialiser un projet SvelteKit avec la commande suivante :
 
 ```bash
 npm init svelte <app-name>
 ```
 
-The command will scaffold a new project in the `app-name` directory asking you if you'd like to set up some basic tooling such as TypeScript. Let's chose the skeleton project and enable all other options (typescript, prettier, etc.)
+La commande va créer un nouveau projet dans le répertoire `app-name` en vous demandant si vous souhaitez mettre en place des outils de base tels que TypeScript. Choisissons le projet squelette et activons toutes les autres options (typescript, prettier, etc.)
 
-## Configure mdsvex
+## Configurer mdsvex
 
-mdsvex is a markdown preprocessor for Svelte components. This preprocessor allows you to use Svelte components in your markdown, or markdown in your Svelte components. mdsvex supports all Svelte syntax and almost all markdown syntax.
+mdsvex est un préprocesseur markdown pour les composants Svelte. Ce préprocesseur vous permet d'utiliser du markdown dans vos composants Svelte et des composants Svelte dans votre markdown. Mdsvex supporte toute la syntaxe Svelte et presque toute la syntaxe markdown.
 
-In addition to mdsvex, we'll also install 2 other libraries in order to generate header links automatically:
+En plus de mdsvex, nous installerons également 2 autres bibliothèques afin de générer automatiquement des liens d'en-tête :
 
-- [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings): add links around your titles
-- [rehype-slug](https://github.com/rehypejs/rehype-slug): add slug ids to your titles
+- [rehype-autolink-headings](https://github.com/rehypejs/rehype-autolink-headings): ajoutez des liens autour de vos titres
+- [rehype-slug](https://github.com/rehypejs/rehype-slug): ajoutez des identifiants à vos titres
 
 ```bash
 pnpm i -D mdsvex rehype-autolink-headings rehype-slug
 ```
 
-Then configure the `svelte.config.js` file:
+Configurez ensuite le fichier `svelte.config.js` :
 
 ```js
 const config = {
@@ -66,7 +66,7 @@ const config = {
 };
 ```
 
-And finally create the `blog.layout.svelte` file with this minimum required markup. It allows using markdown configuration as props:
+Enfin, créez le fichier `blog.layout.svelte` avec ce balisage minimum requis. Il permet d'utiliser la configuration markdown comme accessoire :
 
 ```svelte
 <script>
@@ -78,9 +78,9 @@ And finally create the `blog.layout.svelte` file with this minimum required mark
 <slot />
 ```
 
-And that's it! Any markdown file will be converted to HTML and then rendered with the layout. The markdown configuration will be passed to the `$$restProps` props.
+Et c'est tout ! Tout fichier markdown sera converti en HTML puis rendu avec la mise en page. La configuration markdown sera passée aux props `$$restProps`.
 
-You can then create a markdown file under `/routes/blog/url-of-your-article`. The layout props are written in the top section as a `yaml` document and the article goes below:
+Vous pouvez alors créer un fichier markdown sous `/routes/blog/url-de-votre-article`. Les propriété de mise en page sont écrits dans la section supérieure sous la forme d'un document `yaml` et l'article se trouve en dessous :
 
 ```md
 ---
@@ -90,9 +90,9 @@ title: It works!
 Yes, it does!
 ```
 
-## configuring the blog list
+## Affichage de la liste d'articles
 
-The blog list is needed to display the blog list. In order to retrieve it, we need to pass it through the SvelteKit data mechanism. To do so, we define a `+layout.server.ts` where the logic goes:
+Pour récupérer la liste des articles, nous devons la faire passer par le mécanisme de données de SvelteKit. Pour ce faire, nous définissons un `+layout.server.ts` avec :
 
 ```typescript
 import type { LayoutServerLoad } from './$types';
@@ -117,7 +117,7 @@ export const load = (async () => {
 }) satisfies LayoutServerLoad;
 ```
 
-Doing the logic in the main layout will allow to get the data anywhere in the site. In particular, in the blog list file: `/blog/+page.svelte`:
+Le fait d'ajouter la logique dans le fichier +layout.svelte principal permettra d'obtenir les données n'importe où dans le site. En particulier, dans le fichier de la liste des blogs : `/blog/+page.svelte` :
 
 ```svelte
 <script lang="ts">
@@ -132,8 +132,7 @@ Doing the logic in the main layout will allow to get the data anywhere in the si
 <ArticleList posts={data.posts} />
 ```
 
-## Going further
+## Pour aller plus loin
 
-- you'd like to customize the style with this [layout stylesheet](https://github.com/Ennoriel/machyme/blob/edf654885b8a5bea0b6090ec28bf8a43a7ca84a2/src/lib/layout/blog.layout.svelte)
-- you'd like to add meta tags for SEO with this [Open Graph Component](https://github.com/Ennoriel/machyme/blob/edf654885b8a5bea0b6090ec28bf8a43a7ca84a2/src/lib/components/OpenGraph.svelte)
-- you'd like to filter the posts by a tag (not done yet 😜)
+- vous pouvez personnaliser le style avec cette [feuille de style de mise en page](https://github.com/Ennoriel/machyme/blob/edf654885b8a5bea0b6090ec28bf8a43a7ca84a2/src/lib/layout/blog.layout.svelte)
+- vous pouvez ajouter des balises méta pour le référencement avec ce [composant Open Graph](https://github.com/Ennoriel/machyme/blob/edf654885b8a5bea0b6090ec28bf8a43a7ca84a2/src/lib/components/OpenGraph.svelte)
