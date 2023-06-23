@@ -24,9 +24,11 @@
 
 <ul>
 	{#each data.tips as tip, index}
+		{@const id = tip.title.replace(/ /g, '-')}
 		<li>
-			<h2 id={tip.title}>
-				<em>Tip #{data.tips.length - index}</em> - <a href="/tips#{tip.title}">{tip.title}</a>
+			<h2 {id}>
+				<em>Tip #{data.tips.length - index}</em> -
+				<a href="/tips#{id}">{tip.title}</a>
 			</h2>
 			<div>
 				<Keywords keywords={tip.technologies} />

@@ -25,7 +25,7 @@
 		},
 		{
 			title: 'Bead weaving pattern editor',
-			url: 'https://www.trouvetonsport.com/',
+			url: 'https://ennoriel.github.io/bead-pattern/',
 			description:
 				'Application web pour créer des motifs de bracelets et de broches en perles. Conçue spécifiquement pour les perles Miyuki. Plus de 2000 perles Miyuki disponibles pour les modèles.',
 			image: {
@@ -47,7 +47,7 @@
 <section>
 	{#each projects as project}
 		<h2>{project.title}</h2>
-		<p>{project.description} <a href={project.url}>Link to the website</a>.</p>
+		<p>{project.description} <a href={project.url} target="_blank">Link to the website</a>.</p>
 		<img {...project.image} width="500" height="350" alt="" />
 	{/each}
 </section>
