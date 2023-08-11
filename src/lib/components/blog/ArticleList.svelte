@@ -30,7 +30,7 @@
 </section>
 
 {#if !top3}
-	<a href="/rss.xml">subscribe to RSS 🧠🚀</a>
+	<a href="/rss.xml">&gt; souscrire au flux RSS 🧠🚀</a>
 {/if}
 
 <style>

@@ -30,7 +30,7 @@
 <a href="/blog">Lire les articles plus anciens</a>
 
 <div>
-	<h2 style:margin-top="0">Tips & tricks</h2>
+	<h2 style:margin-top="0">Astuces</h2>
 
 	<p style:margin-bottom="0">
 		<strong
@@ -39,7 +39,7 @@
 		>
 		Certaines sont faciles à résoudre, et vous avez probablement déjà réglé certains. D'autres sont plus
 		délicates, et vous devez ouvrir plus d'un post StackOverflow. C'est pourquoi je partage avec vous
-		quelques-uns des <a href="/tips">trucs et astuces</a> les plus courants mais les plus délicats.
+		quelques-uns des <a href="/astuces">trucs et astuces</a> les plus courants mais les plus délicats.
 	</p>
 </div>
 
@@ -51,11 +51,6 @@
 	faire savoir ou à <a href="/services">voir ce que je peux vous proposer</a>.
 </p>
 
-<br />
-<br />
-<br />
-<br />
-
 <style>
 	div {
 		position: relative;
@@ -64,16 +59,4 @@
 		margin: 64px -64px;
 		background-color: var(--primary-color-50);
 	}
-	/* div::before {
-		content: '';
-		position: absolute;
-		width: var(--100vw, 99vw);
-		left: 50%;
-		top: 0;
-		bottom: 0;
-		z-index: -1;
-		background-color: var(--primary-color-50);
-		transform: translateX(-50%);
-		box-sizing: border-box;
-	} */
 </style>

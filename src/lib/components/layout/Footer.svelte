@@ -7,7 +7,7 @@
 	<div class="wrapper">
 		<span>
 			<p>Maxime Dupont</p>
-			<p><a href="/legals">Mentions légales</a></p>
+			<p><a href="/mentions-legales">Mentions légales</a></p>
 		</span>
 		<span>
 			<p><a href="mailto:m.dupont103@gmail.com">🐟 Email</a></p>
@@ -21,7 +21,7 @@
 		<span>
 			{#each routes.filter((route) => route.bottom) as route}
 				{@const active = $page.url.pathname === route.path}
-				<p>
+				<p style:margin="4px">
 					<a href={route.path} aria-current={(active && 'page') || undefined}>
 						{route.label}
 					</a>
@@ -34,6 +34,7 @@
 <style>
 	footer {
 		padding: 64px 0 48px;
+		margin-top: 72px;
 		background-color: var(--primary-color-50);
 
 		display: flex;

@@ -12,10 +12,10 @@
 
 <Seo
 	description="Les derniers conseils de Maxime Dupont sur Svelte, l'accessibilité et la DataViz."
-	title="Maxime Dupont - tips"
+	title="Maxime Dupont - astuces"
 />
 
-<h1>Tips & tricks</h1>
+<h1>Astuces</h1>
 
 <blockquote>
 	Sur cette page, je partagerai quelques conseils et astuces que j'ai trouvés en essayant de
@@ -28,7 +28,7 @@
 		<li>
 			<h2 {id}>
 				<em>Tip #{data.tips.length - index}</em> -
-				<a href="/tips#{id}">{tip.title}</a>
+				<a href="/astuces#{id}">{tip.title}</a>
 			</h2>
 			<div>
 				<Keywords keywords={tip.technologies} />
@@ -44,7 +44,7 @@
 		padding: 0;
 	}
 
-	li {
+	li:not(:last-of-type) {
 		list-style: none;
 		margin-bottom: 96px;
 	}

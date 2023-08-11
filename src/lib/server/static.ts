@@ -24,7 +24,7 @@ export async function getPosts() {
 export async function getTips() {
 	const tips = await Promise.all(
 		Object.entries(
-			import.meta.glob('/src/routes/\\(app\\)/tips/data/**/*.md') as GlobReturn<Tip>
+			import.meta.glob('/src/routes/\\(app\\)/astuces/data/**/*.md') as GlobReturn<Tip>
 		).map(async (arg) => convertMetadata(arg))
 	);
 	tips.sort((a, b) => Date.parse(b.date) - Date.parse(a.date));

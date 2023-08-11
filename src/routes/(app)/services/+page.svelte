@@ -33,7 +33,7 @@
 	Je suis passionné par la performance et la qualité du code ! J'ai une solide expérience dans le
 	développement d'applications web maintenables en utilisant des frameworks de composants,
 	TypeScript ainsi que les bonnes pratiques.
-	<a href="/projects">Voir mes expériences passées</a>.
+	<a href="/projets">Voir mes expériences passées</a>.
 </p>
 <p>
 	J'aime faire du code maintenable, testé et documenté. Je peux rédiger des guides et des documents
@@ -77,16 +77,8 @@
 	{/each}
 </ul>
 
-<h2>Le mot de la fin</h2>
-
-<p>
-	Si vous êtes arrivé jusqu'ici, vous savez ce que cela signifie : nous sommes probablement destinés
-	à travailler ensemble !
+<p style:margin-top="72px">
+	Si vous souhaitez que l'on travaille ensemble, <a href="mailto:m.dupont103@gmail.com">
+		envoyez-moi un email !
+	</a>
 </p>
-
-<a href="mailto:m.dupont103@gmail.com">Envoyez-moi un email!</a>
-
-<br />
-<br />
-<br />
-<br />
