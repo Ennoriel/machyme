@@ -35,7 +35,7 @@
 	footer {
 		padding: 64px 0 48px;
 		margin-top: 72px;
-		background-color: var(--primary-color-50);
+		background-color: var(--primary-color-25);
 
 		display: flex;
 		justify-content: center;

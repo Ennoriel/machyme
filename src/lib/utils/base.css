@@ -6,6 +6,7 @@ main {
 }
 
 body {
+	--primary-color-25: #f1f9ff;
 	--primary-color-50: #e2f1ff;
 	--primary-color-100: #b9dcff;
 	--primary-color-200: #8ac7ff;
@@ -18,8 +19,8 @@ body {
 	--primary-color-900: #2239b8;
 
 	--primary-color: var(--primary-color-800);
-	--link-color: var(--primary-color-700);
-	--focus-color: var(--primary-color-700);
+	--link-color: var(--primary-color-800);
+	--focus-color: var(--primary-color-800);
 	--text-color: #345;
 	--grey-text-color: #767676;
 

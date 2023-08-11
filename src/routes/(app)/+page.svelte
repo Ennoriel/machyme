@@ -57,6 +57,6 @@
 		z-index: 0;
 		padding: 48px 64px;
 		margin: 64px -64px;
-		background-color: var(--primary-color-50);
+		background-color: var(--primary-color-25);
 	}
 </style>

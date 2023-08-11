@@ -24,7 +24,7 @@
 	li {
 		list-style: none;
 		background-color: var(--primary-color-50);
-		color: var(--primary-color-900);
+		color: var(--primary-color-800);
 		padding: 0 8px 2px;
 		border-radius: 4px;
 	}
