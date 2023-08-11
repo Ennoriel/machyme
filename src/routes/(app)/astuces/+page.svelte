@@ -33,7 +33,9 @@
 			<div>
 				<Keywords keywords={tip.technologies} />
 			</div>
-			<p style:color="#789" style:margin-top="8px">{formatDate(tip.date, 'fr-FR')}</p>
+			<p style:color="var(--grey-text-color)" style:margin-top="8px">
+				{formatDate(tip.date, 'fr-FR')}
+			</p>
 			<svelte:component this={tipsContentAny[tip.component]} />
 		</li>
 	{/each}
