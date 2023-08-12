@@ -1,3 +1,7 @@
+<script>
+	import ContactLink from '$lib/components/layout/ContactLink.svelte';
+</script>
+
 <h1>Mentions Légales</h1>
 
 <h2>Identité</h2>
@@ -8,7 +12,7 @@
 </p>
 
 <p>
-	m.dupont103@gmail.com<br />
+	<ContactLink>m.dupont103@gmail.com</ContactLink><br />
 	106 Boulevard de Sévigné<br />
 	35700 Rennes<br />
 	France

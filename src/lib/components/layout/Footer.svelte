@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import ContactLink from './ContactLink.svelte';
 	import { routes } from './routes';
 </script>
 
@@ -10,7 +11,7 @@
 			<p><a href="/mentions-legales">Mentions légales</a></p>
 		</span>
 		<span>
-			<p><a href="mailto:m.dupont103@gmail.com">🐟 Email</a></p>
+			<p><ContactLink>🐟 Email</ContactLink></p>
 			<p>
 				<a href="https://www.linkedin.com/in/maxime-dupont-dev/" target="_blank" rel="noreferrer"
 					>🤙 LinkedIn</a

@@ -1,4 +1,5 @@
 <script>
+	import ContactLink from '$lib/components/layout/ContactLink.svelte';
 	import { Seo } from 'chyme-svelte';
 
 	const SKILLS = [
@@ -78,7 +79,5 @@
 </ul>
 
 <p style:margin-top="72px">
-	Si vous souhaitez que l'on travaille ensemble, <a href="mailto:m.dupont103@gmail.com">
-		envoyez-moi un email !
-	</a>
+	Si vous souhaitez que l'on travaille ensemble, <ContactLink>envoyez-moi un email !</ContactLink>
 </p>

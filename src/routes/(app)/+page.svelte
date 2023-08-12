@@ -2,6 +2,7 @@
 	import ArticleList from '$lib/components/blog/ArticleList.svelte';
 	import { Seo } from 'chyme-svelte';
 	import type { PageData } from './$types';
+	import ContactLink from '$lib/components/layout/ContactLink.svelte';
 	export let data: PageData;
 </script>
 
@@ -18,8 +19,8 @@
 	</p>
 
 	<p>
-		<a href="mailto:m.dupont103@gmail.com">Contactez-moi</a> si vous souhaitez que je prototype, construise
-		ou fasse une revue de votre projet.
+		<ContactLink>Contactez-moi</ContactLink> si vous souhaitez que je prototype, construise ou fasse
+		une revue de votre projet.
 	</p>
 </div>
 

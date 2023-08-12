@@ -1,5 +1,6 @@
 <script>
 	import { page } from '$app/stores';
+	import ContactLink from '$lib/components/layout/ContactLink.svelte';
 	import { routes } from '$lib/components/layout/routes';
 	import glasses from './glasses';
 </script>
@@ -96,7 +97,7 @@
 	<div />
 	<div class="black">
 		<h2 class="compact" style:--s="22vw" style:--m="11vw">Contact</h2>
-		<p><a href="mailto:m.dupont103@gmail.com" style:--s="8vw" style:--m="4vw">Mail</a></p>
+		<p style:--s="8vw" style:--m="4vw"><ContactLink /></p>
 		<p>
 			<a
 				href="https://www.linkedin.com/in/maxime-dupont-dev/"
