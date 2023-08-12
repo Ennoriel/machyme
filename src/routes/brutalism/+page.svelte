@@ -5,7 +5,7 @@
 	import glasses from './glasses';
 </script>
 
-<div class="grid">
+<div class="wrapper">
 	<div class="laptop" />
 	<nav class="black flex">
 		{#each routes.filter((route) => route.top) as route}
@@ -68,7 +68,7 @@
 	</div>
 	<div class="mobile" />
 	<div class="black" style:padding="0 4px">
-		<p style:--s="4.2vw" style:--m="2.1vw" style:margin="0" style:text-align="justify">
+		<p style:--s="4.1vw" style:--m="2.1vw" style:margin="0" style:text-align="justify">
 			Brutalism is characterized by minimalism that showcase the bare elements. The style makes use
 			of angular geometric shapes and a predominantly monochrome black color palette.
 		</p>
@@ -77,7 +77,7 @@
 				href="https://en.wikipedia.org/wiki/Brutalist_architecture"
 				target="_blank"
 				rel="noreferrer"
-				style:--s="4.2vw"
+				style:--s="4.1vw"
 				style:--m="2.2vw"
 				style:letter-spacing=".4px"
 				style:display="flex"
@@ -97,7 +97,11 @@
 	<div />
 	<div class="black">
 		<h2 class="compact" style:--s="22vw" style:--m="11vw">Contact</h2>
-		<p style:--s="8vw" style:--m="4vw"><ContactLink /></p>
+		<p>
+			<span style:--s="8vw" style:--m="4vw">
+				<ContactLink />
+			</span>
+		</p>
 		<p>
 			<a
 				href="https://www.linkedin.com/in/maxime-dupont-dev/"
@@ -133,7 +137,7 @@
 		line-height: 0.75;
 		font-weight: normal;
 	}
-	.grid {
+	.wrapper {
 		display: grid;
 	}
 	div {
@@ -170,7 +174,7 @@
 		padding: 0 4px;
 	}
 
-	a {
+	.wrapper :global(a) {
 		color: white;
 	}
 
@@ -184,7 +188,7 @@
 		.mobile {
 			display: none;
 		}
-		.grid {
+		.wrapper {
 			grid-template-columns: 1fr 1fr;
 		}
 	}
