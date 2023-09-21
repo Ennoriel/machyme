@@ -1,8 +1,16 @@
 import { sveltekit } from '@sveltejs/kit/vite';
+import { nodeLoaderPlugin } from '@vavite/node-loader/plugin';
+import { defineConfig } from 'vite';
 
 /** @type {import('vite').UserConfig} */
-const config = {
-	plugins: [sveltekit()]
-};
+export default defineConfig(({ mode }) => {
+	let plugins = [sveltekit()];
 
-export default config;
+	if (mode === 'development') {
+		plugins = [nodeLoaderPlugin(), ...plugins];
+	}
+
+	return {
+		plugins
+	};
+});
