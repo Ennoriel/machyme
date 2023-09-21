@@ -20,6 +20,14 @@
 			clip = clamp((100 * (clientX - rect.left)) / rect.width, 0, 100);
 		}
 	}
+
+	function onkeypress(e: KeyboardEvent) {
+		if (e.key === 'ArrowLeft') {
+			clip = clamp(clip - 1, 0, 100);
+		} else if (e.key === 'ArrowRight') {
+			clip = clamp(clip + 1, 0, 100);
+		}
+	}
 </script>
 
 <svelte:window on:mouseup={onMouseup} on:mousemove|preventDefault|stopPropagation={onMousemove} />
@@ -31,15 +39,30 @@
 		style:filter="blur(4px)"
 	/>
 	<img class="overlay" src="/art.svg" alt="random ellipsis that unblurs as you scroll by" />
-	<div
+	<button
 		class="slider"
 		on:mousedown={onMousedown}
 		on:touchstart={onMousedown}
 		on:touchend={onMouseup}
 		on:touchmove|preventDefault|stopPropagation={onMousemove}
+		on:keydown={onkeypress}
 	/>
-	<span class="icon icon-left" on:mousedown={onMousedown} on:touchstart={onMousedown}>←</span>
-	<span class="icon icon-right" on:mousedown={onMousedown} on:touchstart={onMousedown}>→</span>
+	<button
+		class="icon icon-left"
+		on:mousedown={onMousedown}
+		on:touchstart={onMousedown}
+		tabindex="-1"
+	>
+		←
+	</button>
+	<button
+		class="icon icon-right"
+		on:mousedown={onMousedown}
+		on:touchstart={onMousedown}
+		tabindex="-1"
+	>
+		→
+	</button>
 </div>
 
 <style>
@@ -64,6 +87,8 @@
 	.slider,
 	.icon {
 		cursor: col-resize;
+		background-color: transparent;
+		padding: 0;
 	}
 	.slider:active,
 	.icon:active {
