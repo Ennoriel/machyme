@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^1.3.22
     version: 1.3.22
   chyme-svelte:
-    specifier: link:../chyme-svelte
-    version: link:../chyme-svelte
+    specifier: ^1.5.8
+    version: 1.5.8(@sveltejs/kit@1.23.0)(svelte@4.2.0)
   eslint:
     specifier: ^8.48.0
     version: 8.48.0
@@ -323,6 +323,23 @@ packages:
   /@eslint/js@8.48.0:
     resolution: {integrity: sha512-ZSjtmelB7IJfWD2Fvb7+Z+ChTIKWq6kjda95fLcQKNS5aheVHn4IkfgRQE3sIIzTcSLwLcLZUD9UBt+V7+h+Pw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    dev: true
+
+  /@floating-ui/core@1.5.0:
+    resolution: {integrity: sha512-kK1h4m36DQ0UHGj5Ah4db7R0rHemTqqO0QLvUqi1/mUUp3LuAWbWxdxSIf/XsnH9VS6rRVPLJCncjRzUvyCLXg==}
+    dependencies:
+      '@floating-ui/utils': 0.1.4
+    dev: true
+
+  /@floating-ui/dom@1.5.3:
+    resolution: {integrity: sha512-ClAbQnEqJAKCJOEbbLo5IUlZHkNszqhuxS4fHAVxRPXPya6Ysf2G8KypnYcOTpx6I8xcgF9bbHb6g/2KpbV8qA==}
+    dependencies:
+      '@floating-ui/core': 1.5.0
+      '@floating-ui/utils': 0.1.4
+    dev: true
+
+  /@floating-ui/utils@0.1.4:
+    resolution: {integrity: sha512-qprfWkn82Iw821mcKofJ5Pk9wgioHicxcQMxx+5zt5GSKoqdWvgG5AxVmpmUUjzTLPVSH5auBrhI93Deayn/DA==}
     dev: true
 
   /@humanwhocodes/config-array@0.11.10:
@@ -861,6 +878,17 @@ packages:
   /chownr@2.0.0:
     resolution: {integrity: sha512-bIomtDF5KGpdogkLd9VspvFzk9KfpyyGlS8YFVZl7TGPBHL5snIOnxeshwVgPteQ9b4Eydl+pVbIyE1DcvCWgQ==}
     engines: {node: '>=10'}
+    dev: true
+
+  /chyme-svelte@1.5.8(@sveltejs/kit@1.23.0)(svelte@4.2.0):
+    resolution: {integrity: sha512-tmlXgPNkjAJGGxfHGzn0qe/xKQfm11CkiGcY099SAFnYDC/jjmBQHpLDuCUj62UBl2TparTkqlaNg5MZhNCN6w==}
+    peerDependencies:
+      '@sveltejs/kit': ^1.15.2
+      svelte: ^3.58.0 || ^4.0.0
+    dependencies:
+      '@sveltejs/kit': 1.23.0(svelte@4.2.0)(vite@4.4.9)
+      svelte: 4.2.0
+      svelte-select: 5.7.0
     dev: true
 
   /chyme@1.3.22:
@@ -2141,6 +2169,13 @@ packages:
       svelte: 4.2.0
     dev: true
 
+  /svelte-floating-ui@1.2.8:
+    resolution: {integrity: sha512-8Ifi5CD2Ui7FX7NjJRmutFtXjrB8T/FMNoS2H8P81t5LHK4I9G4NIs007rLWG/nRl7y+zJUXa3tWuTjYXw/O5A==}
+    dependencies:
+      '@floating-ui/core': 1.5.0
+      '@floating-ui/dom': 1.5.3
+    dev: true
+
   /svelte-hmr@0.15.3(svelte@4.2.0):
     resolution: {integrity: sha512-41snaPswvSf8TJUhlkoJBekRrABDXDMdpNpT2tfHIv4JuhgvHqLMhEPGtaQn0BmbNSTkuz2Ed20DF2eHw0SmBQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
@@ -2196,6 +2231,13 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.2.0
       typescript: 5.2.2
+    dev: true
+
+  /svelte-select@5.7.0:
+    resolution: {integrity: sha512-oClK1exjcWDj2817+0djGhK04t5CSZbuP0oh7gz+3dEcn/G+QqRsfI2/dvIyOSHILqNzlj+Ztp2z1pMtE7Wf8Q==}
+    dependencies:
+      '@floating-ui/dom': 1.5.3
+      svelte-floating-ui: 1.2.8
     dev: true
 
   /svelte@4.2.0:
