@@ -2,71 +2,40 @@
 	import { onMount } from 'svelte';
 	import { fade, draw } from 'svelte/transition';
 	import { toto_paths } from './path';
-	import { colorRange, randomHexColor } from 'chyme';
+	import { colorRange } from 'chyme';
 	import ColorPicker from 'svelte-awesome-color-picker';
-	import InputNumber from '$lib/components/input/InputNumber.svelte';
-
-	export let visible: boolean;
-	let loaded = false;
 
 	let x = 0;
-	let delay = 400;
-	let duration = 1000;
 	let intervalId: number;
 
-	let c1 = randomHexColor();
-	let c2 = randomHexColor();
+	export let data;
+
+	let c1 = data.c1;
+	let c2 = data.c2;
 	$: r = colorRange(c1, c2, toto_paths.length) || [];
 
 	onMount(() => {
-		intervalId = window.setInterval(() => (x = x + 1), delay);
-		visible = true;
-		loaded = true;
+		intervalId = window.setInterval(() => (x = x + 1), 400);
+
+		return () => clearInterval(intervalId);
 	});
 
-	$: if (visible) {
-		x = 0;
-		if (!delay) {
-			setTimeout(() => (x = 10000), 0);
-		}
-	}
-
-	function delayChange() {
-		clearInterval(intervalId);
-		if (delay) {
-			intervalId = window.setInterval(() => (x = x + 1), delay);
-		} else {
-			x = 10000;
-		}
-	}
-
 	function restartAnimation() {
-		visible = false;
-		setTimeout(() => {
-			visible = true;
-		}, 200);
+		x = -1;
 	}
 </script>
 
 <div class="commands">
-	<InputNumber label="Delay" bind:value={delay} on:keyup={delayChange} />
-	<InputNumber label="Duration" bind:value={duration} on:keyup={delayChange} />
-
-	{#if loaded}
-		<ColorPicker bind:hex={c1} label="Start color" />
-		<ColorPicker bind:hex={c2} label="End color" />
-	{:else}
-		<div class="input-like" style:width="140px" />
-		<div class="input-like" style:width="140px" />
-	{/if}
+	<ColorPicker bind:hex={c1} label="Start color" />
+	<ColorPicker bind:hex={c2} label="End color" />
 
 	<button on:click={restartAnimation}> Restart animation </button>
 </div>
 
-{#if visible}
+{#if x >= 0}
 	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320">
 		<g
-			out:fade|local={{ duration: delay }}
+			out:fade|local={{ duration: 400 }}
 			fill="none"
 			stroke-width="7"
 			stroke-linejoin="round"
@@ -75,7 +44,7 @@
 			{#each toto_paths as toto_path, index}
 				{#each toto_path as d}
 					{#if x > index}
-						<path in:draw={{ duration }} stroke={r[index]} {d} />
+						<path in:draw={{ duration: 1000 }} stroke={r[index]} {d} />
 					{/if}
 				{/each}
 			{/each}
@@ -90,11 +59,12 @@
 		flex-wrap: wrap;
 		gap: 16px;
 		justify-content: center;
-		margin: 16px;
+		margin-bottom: 16px;
 	}
 
-	.commands :global(.color-picker) {
-		position: static;
+	.commands :global(input[type='color']) {
+		width: 1px;
+		height: 1px;
 	}
 
 	.commands :global(.color-picker label) {
@@ -102,11 +72,16 @@
 		margin: 0;
 	}
 
-	.commands :global(.wrapper) {
-		top: 192px;
+	.commands :global(.color-picker) {
+		position: static;
+		--input-size: 26px;
 	}
 
-	@media (min-width: 768) {
+	.commands :global(.wrapper) {
+		top: 220px;
+	}
+
+	@media (min-width: 768px) {
 		.commands :global(.wrapper) {
 			left: 72px;
 		}
@@ -114,12 +89,12 @@
 
 	button,
 	.commands :global(.color-picker label) {
+		box-sizing: content-box;
 		padding: 10px 20px 10px 10px;
 		background-color: white;
 		border: none;
 		border-radius: 3px;
 		box-shadow: 0 0 5px #ccc;
-		cursor: pointer;
 		transition: background-color 0.2s ease-in-out;
 	}
 

@@ -24,8 +24,8 @@ devDependencies:
     specifier: ^1.3.22
     version: 1.3.22
   chyme-svelte:
-    specifier: ^1.5.9
-    version: 1.5.9(@sveltejs/kit@1.27.1)(svelte@4.2.2)
+    specifier: ^1.5.10
+    version: 1.5.10(@sveltejs/kit@1.27.1)(svelte@4.2.2)
   eslint:
     specifier: ^8.52.0
     version: 8.52.0
@@ -54,8 +54,8 @@ devDependencies:
     specifier: ^4.2.2
     version: 4.2.2
   svelte-awesome-color-picker:
-    specifier: ^2.4.8
-    version: 2.4.8
+    specifier: 3.0.0-beta.7
+    version: 3.0.0-beta.7(svelte-awesome-slider@0.0.6)(svelte@4.2.2)
   svelte-check:
     specifier: ^3.5.2
     version: 3.5.2(postcss@8.4.31)(svelte@4.2.2)
@@ -884,11 +884,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /chyme-svelte@1.5.9(@sveltejs/kit@1.27.1)(svelte@4.2.2):
-    resolution: {integrity: sha512-6KEt21nkEL0OpN9ne9a974rDtA5LiczNQFedbTGs5aYuP9T40+hy9iD6JrX9jFMHpD4lQ6iIaLbRidLJ/r5FvA==}
+  /chyme-svelte@1.5.10(@sveltejs/kit@1.27.1)(svelte@4.2.2):
+    resolution: {integrity: sha512-auNisiIywVPz74X9z1cZWsyffNlY1paL75kfPsR2VsRQ+j/vFaeasdEOCNIAVdF+t+Qt6HyQr6UcjmASm5Pwqg==}
     peerDependencies:
       '@sveltejs/kit': ^1.5.0
-      svelte: ^3.54.0
+      svelte: ^3.54.0 || ^4.0.0
     dependencies:
       '@sveltejs/kit': 1.27.1(svelte@4.2.2)(vite@4.5.0)
       chyme: 1.3.22
@@ -2111,10 +2111,23 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-awesome-color-picker@2.4.8:
-    resolution: {integrity: sha512-p6yzMMeo/IjqKMYb8oXa2vGbbRvtEDvi8LejGpY8AsZsjNwXSR0WKxQplaz67u1eqZFIRLPX0+IknQrhT5gI+g==}
+  /svelte-awesome-color-picker@3.0.0-beta.7(svelte-awesome-slider@0.0.6)(svelte@4.2.2):
+    resolution: {integrity: sha512-H5KDKHADiqLokCavGGbTXowKN53MoQcX2Mm047+eqt5ypY26Vx4NnMB6VWlExCTqUrAh68AIT8em4HbAl6ATjA==}
+    peerDependencies:
+      svelte: ^3.55.1 || ^4.0.0
+      svelte-awesome-slider: ^0.0.6
     dependencies:
       colord: 2.9.3
+      svelte: 4.2.2
+      svelte-awesome-slider: 0.0.6(svelte@4.2.2)
+    dev: true
+
+  /svelte-awesome-slider@0.0.6(svelte@4.2.2):
+    resolution: {integrity: sha512-ZH27IY+z4o81TnyAZZDqLtjN+HItVGBIUj27N/kPuS+5gxZqb5ccvUiUGYRX2lH/CZKlFiGsUFEp60ppp2MW4A==}
+    peerDependencies:
+      svelte: ^3.54.0 || ^4.0.0
+    dependencies:
+      svelte: 4.2.2
     dev: true
 
   /svelte-check@3.5.2(postcss@8.4.31)(svelte@4.2.2):
